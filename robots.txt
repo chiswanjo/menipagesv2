@@ -1,0 +1,265 @@
+# ═══════════════════════════════════════════════════════════
+# robots.txt — MeniPages (www.menipages.com)
+# Last updated: 2025-03-01
+#
+# Policy: Allow all legitimate search and AI crawlers.
+# Block low-quality scrapers and spam bots.
+# ═══════════════════════════════════════════════════════════
+
+# ── Sitemap location (submitted to Google Search Console) ──
+Sitemap: https://www.menipages.com/sitemap.xml
+
+# ── Default: allow all well-behaved crawlers ──
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /checkout/
+Disallow: /*.json$
+Disallow: /cdn-cgi/
+
+# ── Crawl-delay for generic bots (polite crawl rate) ──
+Crawl-delay: 2
+
+
+# ══════════════════════════════════════════════════════
+#  GOOGLE — Full access for all Google crawlers
+# ══════════════════════════════════════════════════════
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /checkout/
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /blog/
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: Google-InspectionTool
+Allow: /
+
+
+# ══════════════════════════════════════════════════════
+#  BING / MICROSOFT — Full access
+# ══════════════════════════════════════════════════════
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 0
+
+User-agent: msnbot
+Allow: /
+
+User-agent: BingPreview
+Allow: /
+
+
+# ══════════════════════════════════════════════════════
+#  OPENAI / CHATGPT — Allow indexing for AI citations
+# ══════════════════════════════════════════════════════
+
+# ChatGPT browsing plugin & web search
+User-agent: ChatGPT-User
+Allow: /
+
+# GPTBot — OpenAI training and product crawler
+User-agent: GPTBot
+Allow: /
+
+# OAI-SearchBot — OpenAI search indexing
+User-agent: OAI-SearchBot
+Allow: /
+
+
+# ══════════════════════════════════════════════════════
+#  ANTHROPIC (Claude) — Allow for AI citations
+# ══════════════════════════════════════════════════════
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+
+# ══════════════════════════════════════════════════════
+#  GOOGLE GEMINI / BARD — Allow AI training & search
+# ══════════════════════════════════════════════════════
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Gemini
+Allow: /
+
+
+# ══════════════════════════════════════════════════════
+#  META (Llama / AI Studio)
+# ══════════════════════════════════════════════════════
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+
+# ══════════════════════════════════════════════════════
+#  PERPLEXITY AI — Allow for AI search citations
+# ══════════════════════════════════════════════════════
+
+User-agent: PerplexityBot
+Allow: /
+
+
+# ══════════════════════════════════════════════════════
+#  APPLE (Siri, Spotlight, Safari) 
+# ══════════════════════════════════════════════════════
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+
+# ══════════════════════════════════════════════════════
+#  AMAZON (Alexa / Bing partnership)
+# ══════════════════════════════════════════════════════
+
+User-agent: Amazonbot
+Allow: /
+
+
+# ══════════════════════════════════════════════════════
+#  YANDEX — Russian search engine
+# ══════════════════════════════════════════════════════
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+
+# ══════════════════════════════════════════════════════
+#  DUCKDUCKGO — Privacy-first search engine
+# ══════════════════════════════════════════════════════
+
+User-agent: DuckDuckBot
+Allow: /
+
+
+# ══════════════════════════════════════════════════════
+#  BAIDU — Chinese search engine
+# ══════════════════════════════════════════════════════
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 5
+
+
+# ══════════════════════════════════════════════════════
+#  COHERE — AI platform
+# ══════════════════════════════════════════════════════
+
+User-agent: cohere-ai
+Allow: /
+
+
+# ══════════════════════════════════════════════════════
+#  MISTRAL AI
+# ══════════════════════════════════════════════════════
+
+User-agent: Mistral AI
+Allow: /
+
+
+# ══════════════════════════════════════════════════════
+#  SOCIAL MEDIA PREVIEW CRAWLERS
+# ══════════════════════════════════════════════════════
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: SkypeUriPreview
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+
+# ══════════════════════════════════════════════════════
+#  SEO TOOLS (allow for legitimate analysis)
+# ══════════════════════════════════════════════════════
+
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Allow: /
+Crawl-delay: 10
+
+User-agent: DotBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: rogerbot
+Allow: /
+Crawl-delay: 10
+
+
+# ══════════════════════════════════════════════════════
+#  BLOCK — Known spam, scraper, and malicious bots
+# ══════════════════════════════════════════════════════
+
+User-agent: MauiBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: SeznamBot
+Disallow: /
+
+User-agent: archive.org_bot
+Allow: /
+
+User-agent: ia_archiver
+Allow: /
