@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">SEO Tips for Small Businesses | MeniPages Blog</title>
+<meta name="description" id="page-desc" content="Practical SEO guides, case studies, and growth strategies for small business owners. No jargon, no fluff — just what works.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://www.menipages.com/blog">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.menipages.com/blog">
+<meta property="og:title" content="SEO Tips for Small Businesses | MeniPages Blog">
+<meta property="og:description" content="Practical SEO guides, case studies, and growth strategies for small business owners.">
+<meta property="og:site_name" content="MeniPages">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SEO Tips for Small Businesses | MeniPages Blog">
+<meta name="twitter:description" content="Practical SEO guides, case studies, and growth strategies for small business owners.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "MeniPages Blog",
+  "url": "https://www.menipages.com/blog",
+  "description": "Practical SEO guides and growth strategies for small business owners.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MeniPages",
+    "url": "https://www.menipages.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.menipages.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.menipages.com/blog" }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:ital,wght@0,300;0,700;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #070F05;
+  --forest: #0D2818;
+  --moss: #1A4030;
+  --lime: #C8F04A;
+  --cream: #F5F0E8;
+  --sand: #D9D2C4;
+  --muted: #6B7A6A;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--ink); color: var(--cream); font-family: 'DM Sans', sans-serif; font-weight: 300; overflow-x: hidden; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.25rem 4rem;
+  background: rgba(7,15,5,0.9); backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(200,240,74,0.1);
+}
+.logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.05em; color: var(--lime); text-decoration: none; }
+.logo span { color: var(--cream); }
+.nav-links { list-style: none; display: flex; gap: 2.5rem; align-items: center; }
+.nav-links a { color: var(--sand); text-decoration: none; font-size: 0.875rem; letter-spacing: 0.05em; transition: color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color: var(--lime); }
+.nav-cta { background: var(--lime); color: var(--ink) !important; padding: 0.6rem 1.5rem; border-radius: 4px; font-weight: 500; transition: transform 0.15s, box-shadow 0.15s; }
+.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(200,240,74,0.35); }
+
+/* BLOG HERO */
+.blog-hero {
+  padding: 8rem 4rem 4rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.hero-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--lime); margin-bottom: 1rem; }
+.hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 5vw, 5rem); line-height: 0.95; letter-spacing: 0.02em; margin-bottom: 1.25rem; }
+.hero-title em { font-family: 'Fraunces', serif; font-style: italic; font-weight: 300; color: var(--lime); }
+.hero-sub { font-size: 1rem; line-height: 1.7; color: var(--sand); }
+
+/* FEATURED POST */
+.featured-card {
+  background: var(--forest);
+  border-radius: 14px;
+  padding: 2.5rem;
+  border: 1px solid rgba(200,240,74,0.12);
+  cursor: pointer;
+  transition: border-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+.featured-card:hover { border-color: rgba(200,240,74,0.4); transform: translateY(-4px); }
+.featured-badge { display: inline-block; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; background: rgba(200,240,74,0.1); color: var(--lime); padding: 0.25rem 0.75rem; border-radius: 999px; border: 1px solid rgba(200,240,74,0.2); margin-bottom: 1.25rem; }
+.featured-cat { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--lime); margin-bottom: 0.75rem; }
+.featured-title { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 700; line-height: 1.3; margin-bottom: 0.75rem; }
+.featured-excerpt { font-size: 0.9rem; line-height: 1.65; color: var(--sand); margin-bottom: 1.5rem; }
+.featured-meta { display: flex; gap: 1.5rem; font-size: 0.75rem; color: var(--muted); align-items: center; }
+.featured-meta .author-dot { width: 5px; height: 5px; background: var(--muted); border-radius: 50%; }
+
+/* BLOG LAYOUT */
+.blog-layout { display: grid; grid-template-columns: 1fr 300px; gap: 4rem; padding: 4rem; max-width: 1200px; margin: 0 auto; }
+
+/* FILTER BAR */
+.filter-bar { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+.filter-btn {
+  background: transparent; border: 1px solid rgba(255,255,255,0.1); color: var(--sand);
+  padding: 0.4rem 1rem; border-radius: 999px; font-size: 0.8rem; cursor: pointer;
+  font-family: 'DM Sans', sans-serif; transition: all 0.2s; letter-spacing: 0.05em;
+}
+.filter-btn:hover, .filter-btn.active { background: var(--lime); color: var(--ink); border-color: var(--lime); font-weight: 500; }
+
+/* SEARCH */
+.search-wrap { position: relative; margin-bottom: 2rem; }
+.search-input {
+  width: 100%; background: var(--forest); border: 1px solid rgba(255,255,255,0.08);
+  color: var(--cream); padding: 0.8rem 1rem 0.8rem 2.75rem; border-radius: 8px;
+  font-family: 'DM Sans', sans-serif; font-size: 0.9rem; outline: none;
+  transition: border-color 0.2s;
+}
+.search-input:focus { border-color: rgba(200,240,74,0.4); }
+.search-input::placeholder { color: var(--muted); }
+.search-icon { position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+
+/* POST GRID */
+.post-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.post-card {
+  background: var(--forest); border-radius: 12px; padding: 1.75rem;
+  border: 1px solid rgba(200,240,74,0.07); text-decoration: none; color: inherit;
+  display: block; transition: border-color 0.3s, transform 0.25s; position: relative; overflow: hidden;
+}
+.post-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--lime); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
+.post-card:hover { border-color: rgba(200,240,74,0.25); transform: translateY(-4px); }
+.post-card:hover::after { transform: scaleX(1); }
+
+.post-cat { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--lime); margin-bottom: 0.6rem; }
+.post-title { font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 700; line-height: 1.35; margin-bottom: 0.6rem; }
+.post-excerpt { font-size: 0.83rem; line-height: 1.6; color: var(--sand); margin-bottom: 1.25rem; }
+.post-meta { display: flex; gap: 1rem; font-size: 0.72rem; color: var(--muted); }
+.read-time { display: flex; align-items: center; gap: 0.3rem; }
+
+.no-results { grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--muted); }
+.no-results h3 { font-family: 'Fraunces', serif; font-size: 1.25rem; color: var(--sand); margin-bottom: 0.5rem; }
+
+/* SIDEBAR */
+.sidebar {}
+.sidebar-block { background: var(--forest); border-radius: 12px; padding: 1.75rem; border: 1px solid rgba(200,240,74,0.07); margin-bottom: 1.5rem; }
+.sidebar-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 1.25rem; }
+.topic-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.topic-list li a { color: var(--sand); text-decoration: none; font-size: 0.85rem; display: flex; align-items: center; justify-content: space-between; padding: 0.4rem 0; border-bottom: 1px solid rgba(255,255,255,0.04); transition: color 0.2s; }
+.topic-list li a:hover { color: var(--lime); }
+.topic-count { font-size: 0.72rem; background: rgba(200,240,74,0.1); color: var(--lime); padding: 0.15rem 0.5rem; border-radius: 999px; }
+
+.cta-sidebar { background: var(--moss); border-radius: 12px; padding: 1.75rem; border: 1px solid rgba(200,240,74,0.15); }
+.cta-sidebar h3 { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.cta-sidebar p { font-size: 0.82rem; line-height: 1.6; color: var(--sand); margin-bottom: 1.25rem; }
+.btn-sm { display: block; text-align: center; background: var(--lime); color: var(--ink); padding: 0.75rem 1rem; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: all 0.2s; }
+.btn-sm:hover { box-shadow: 0 4px 16px rgba(200,240,74,0.35); transform: translateY(-1px); }
+
+/* FOOTER */
+footer { background: var(--ink); padding: 2.5rem 4rem; border-top: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+footer p { font-size: 0.8rem; color: var(--muted); }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a { color: var(--muted); text-decoration: none; font-size: 0.8rem; transition: color 0.2s; }
+.footer-links a:hover { color: var(--lime); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  .blog-hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 3rem; gap: 2rem; }
+  .blog-layout { grid-template-columns: 1fr; padding: 2rem 1.5rem; gap: 2rem; }
+  .post-grid { grid-template-columns: 1fr; }
+  footer { flex-direction: column; text-align: center; padding: 2rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════
+     ✏️  CMS DATA — EDIT HERE TO ADD POSTS
+     Each post object = one blog article.
+     slug: URL path (no spaces, lowercase)
+     ════════════════════════════════════ -->
+<script>
+window.BLOG_POSTS = [
+  {
+    slug: "what-is-programmatic-seo",
+    title: "What Is Programmatic SEO? A Plain-English Guide for Small Business Owners",
+    metaTitle: "What Is Programmatic SEO? Plain-English Guide | MeniPages",
+    metaDesc: "Confused by programmatic SEO? This plain-English guide explains exactly what it is, how it works, and why it's the fastest way for small businesses to rank on Google.",
+    category: "SEO Basics",
+    date: "2025-02-18",
+    author: "MeniPages Team",
+    readTime: "6 min read",
+    featured: true,
+    excerpt: "You've probably heard the term 'programmatic SEO' thrown around — but what does it actually mean for your small business? We break it down without the jargon.",
+    tags: ["programmatic SEO", "small business", "SEO basics", "Google ranking"],
+    content: `
+      <p>If you've spent any time researching how to get your business found on Google, you've likely stumbled across the term "programmatic SEO" — and probably clicked away, confused. That's fair. Most explanations read like they were written for engineers, not business owners.</p>
+      <p>Here's what it actually means, in plain English.</p>
+
+      <h2>The Simple Version</h2>
+      <p>Traditional SEO says: write good content, get links, be patient. Programmatic SEO says: instead of writing one page and hoping it ranks, build <em>hundreds or thousands</em> of pages — each one targeting a specific thing your customers search for.</p>
+      <p>Think of it like this. If you're a plumber in Houston, you'd want to show up when someone searches:</p>
+      <ul>
+        <li>"emergency plumber Houston TX"</li>
+        <li>"drain cleaning service Houston"</li>
+        <li>"water heater replacement Houston Heights"</li>
+        <li>"plumber near Katy TX"</li>
+      </ul>
+      <p>That's four different searches. Four different customer intents. One page can't rank for all of them equally well — but four pages can each rank for one.</p>
+      <p>Programmatic SEO creates those pages systematically, at scale, using templates and data. You end up with hundreds of targeted pages instead of one general one.</p>
+
+      <h2>Why Does Scale Matter?</h2>
+      <p>Google's job is to show the most relevant result for every search. The more specific and relevant your page is to a search term, the better your chances of ranking.</p>
+      <p>A page titled "Plumber Houston" competes with every plumbing business in Houston. A page titled "Emergency Water Heater Replacement in Houston Heights, TX" competes with almost no one — and ranks much faster.</p>
+      <p>When you have 500 of those specific pages, covering every service, every neighborhood, every related search term... you start owning the category.</p>
+
+      <h2>Who Is It For?</h2>
+      <p>Programmatic SEO works best for businesses with:</p>
+      <ul>
+        <li>Multiple services (plumbing, HVAC, electrical)</li>
+        <li>Multiple locations (serving multiple cities or neighborhoods)</li>
+        <li>Any combination of both (service × location pages)</li>
+      </ul>
+      <p>It's particularly powerful for local service businesses — plumbers, dentists, lawyers, accountants, contractors — because you can target every city and service combination your customers might search for.</p>
+
+      <h2>What Makes It "Programmatic"?</h2>
+      <p>The word "programmatic" just means systematic and template-driven. Instead of writing each page from scratch, you build a template and fill it with data. The page structure stays the same; the specific details (city, service, keyword) change.</p>
+      <p>Done well, each page feels genuinely unique and valuable to both users and Google. Done badly, it creates thin, spammy pages that Google ignores or penalizes. Quality execution is everything.</p>
+
+      <h2>The Bottom Line</h2>
+      <p>Programmatic SEO is the most efficient way to get a small business in front of customers who are actively searching for what you offer. Instead of competing for one broad keyword with your whole website, you own hundreds of specific searches with dedicated pages.</p>
+      <p>It's not magic — it takes expertise and good execution. But when done right, it compounds. Every new page is another entry point for customers to find you.</p>
+    `
+  },
+  {
+    slug: "why-your-business-doesnt-show-up-on-google",
+    title: "Why Your Business Doesn't Show Up on Google (And How to Fix It)",
+    metaTitle: "Why Your Business Doesn't Show Up on Google | MeniPages",
+    metaDesc: "Not showing up on Google? Here are the 5 most common reasons small businesses are invisible in search results — and exactly how to fix each one.",
+    category: "SEO Strategy",
+    date: "2025-02-10",
+    author: "MeniPages Team",
+    readTime: "8 min read",
+    featured: false,
+    excerpt: "Most small businesses that aren't showing up on Google have one of five fixable problems. Here's how to diagnose which one is yours.",
+    tags: ["Google ranking", "local SEO", "small business SEO", "visibility"],
+    content: `
+      <p>You've built a website. You've been in business for years. Your work is excellent. And yet — when a potential customer searches for what you do in your city, you're nowhere to be found on Google.</p>
+      <p>You're not alone. This is one of the most common frustrations we hear from small business owners. The good news: in most cases, the reason is fixable. Here are the five most common culprits.</p>
+
+      <h2>1. Google Doesn't Know What You Do</h2>
+      <p>This sounds ridiculous, but it's extremely common. Your website has a homepage that says "Welcome to [Business Name]" — and not much else that Google can use to understand your services.</p>
+      <p>Google reads your website like a document. If the words "plumber," "drain cleaning," and "Houston" aren't clearly and repeatedly present on your site, Google won't associate you with those searches.</p>
+      <p><strong>Fix it:</strong> Every page on your site should clearly state what you do, where you do it, and for whom. Your homepage H1 shouldn't be your business name — it should be your service and location.</p>
+
+      <h2>2. You Have One Page Trying to Rank for Everything</h2>
+      <p>A single homepage cannot rank for "plumber Houston," "emergency plumber Houston," "drain cleaning Houston," and "water heater repair Houston" all at once. Each of those searches needs its own dedicated page to rank well.</p>
+      <p><strong>Fix it:</strong> Create individual service pages for each thing you offer, and individual location pages for each area you serve. More targeted pages = more chances to show up.</p>
+
+      <h2>3. Your Google Business Profile Is Incomplete</h2>
+      <p>Google Business Profile (formerly Google My Business) is one of the most powerful free tools available to local businesses — and most are barely using it.</p>
+      <p><strong>Fix it:</strong> Fill in every field completely. Add photos. Collect reviews. Post updates regularly. Respond to every review. The businesses that show up in the local "map pack" at the top of Google search results are the ones who treat their GBP as a living, active profile.</p>
+
+      <h2>4. Your Website Is Too Slow</h2>
+      <p>Google uses page speed as a ranking factor. If your website takes more than 3 seconds to load on mobile, you're being penalized — and visitors are bouncing before they even see your content.</p>
+      <p><strong>Fix it:</strong> Run your site through Google's free PageSpeed Insights tool. The most common culprits are unoptimized images, slow hosting, and bulky plugins (especially on WordPress sites).</p>
+
+      <h2>5. Nobody Links to You</h2>
+      <p>Links from other websites to yours are still one of Google's most important ranking signals. A local business with zero external links will almost always rank below competitors who have links from local directories, chambers of commerce, local news sites, or industry associations.</p>
+      <p><strong>Fix it:</strong> Start with the basics — get listed in Google Business, Yelp, BBB, your local chamber of commerce, and any industry directories. Then build from there.</p>
+
+      <h2>The Underlying Pattern</h2>
+      <p>All five of these problems share a root cause: not enough relevant, specific content and signals pointing Google toward your business for the right searches. The solution, in every case, is to give Google more to work with — more pages, more detail, more signals that you are the right answer for your customers' searches.</p>
+    `
+  },
+  {
+    slug: "local-seo-guide-2025",
+    title: "Local SEO in 2025: The Complete Guide for Small Business Owners",
+    metaTitle: "Local SEO Guide 2025: Complete Playbook for Small Businesses | MeniPages",
+    metaDesc: "The definitive local SEO guide for 2025. Learn exactly how to rank your small business on Google Maps and local search results — step by step.",
+    category: "Local SEO",
+    date: "2025-01-28",
+    author: "MeniPages Team",
+    readTime: "12 min read",
+    featured: false,
+    excerpt: "Local SEO in 2025 is more competitive than ever — but also more accessible to small businesses who know the playbook. Here's everything that works right now.",
+    tags: ["local SEO", "Google Maps", "Google Business Profile", "2025", "ranking"],
+    content: `
+      <p>Local SEO is the practice of optimizing your online presence to attract customers from specific geographic areas. When someone searches "dentist near me" or "best accountant in Denver" — local SEO is what determines who shows up.</p>
+      <p>In 2025, local SEO has three main battlegrounds: Google Business Profile, your website, and your online reputation. Here's how to win each one.</p>
+
+      <h2>Part 1: Google Business Profile</h2>
+      <p>Your Google Business Profile (GBP) is the single highest-leverage action you can take for local visibility. It controls what shows up in Google Maps and the "local pack" — the three business listings that appear at the top of most local searches.</p>
+
+      <h3>Complete Every Field</h3>
+      <p>Business name, address, phone number, website, hours, service area, services offered, description, and category. Businesses with 100% complete profiles rank significantly higher than incomplete ones.</p>
+
+      <h3>Photos Matter More Than You Think</h3>
+      <p>Google rewards businesses that upload photos regularly. Businesses with photos get 42% more requests for directions and 35% more website clicks than those without. Upload real photos of your team, your work, and your premises.</p>
+
+      <h3>Reviews Are Currency</h3>
+      <p>The quantity, quality, and recency of Google reviews are major local ranking factors. Respond to every review — positive or negative. A business with 50 reviews and active responses outperforms one with 200 reviews and silence.</p>
+
+      <h2>Part 2: Your Website</h2>
+      <p>Your GBP and website work together. Google wants to see that both are consistent and signal the same local relevance.</p>
+
+      <h3>NAP Consistency</h3>
+      <p>Your Name, Address, and Phone number must be identical everywhere online. A discrepancy between your website, GBP, and Yelp page sends confusion signals to Google.</p>
+
+      <h3>Location Pages</h3>
+      <p>If you serve multiple cities or neighborhoods, each one needs its own page — not a single page listing all your service areas. A dedicated "HVAC Repair in Naperville, IL" page will outrank a generic service area list every time.</p>
+
+      <h3>Schema Markup</h3>
+      <p>Add LocalBusiness schema markup to your website. This structured data helps Google understand exactly who you are, where you are, and what you do — boosting your local search presence.</p>
+
+      <h2>Part 3: Authority and Citations</h2>
+      <p>Citations are online mentions of your business name, address, and phone number — even without a link. Getting listed in authoritative directories builds Google's confidence in your business.</p>
+      <p>Start with: Google Business, Yelp, Facebook Business, BBB, Angi, Thumbtack, HomeAdvisor (for home services), Healthgrades (for medical), Avvo (for legal), and your local Chamber of Commerce.</p>
+
+      <h2>The Compound Effect</h2>
+      <p>Local SEO isn't a one-time project — it's a compounding system. Every review you earn, every citation you get, every location page you add stacks on top of the previous ones. Businesses that commit to it consistently become nearly impossible to displace from the top of local search results.</p>
+    `
+  },
+  {
+    slug: "case-study-plumber-houston-traffic",
+    title: "Case Study: How a Houston Plumber Grew Website Traffic 312% in 6 Months",
+    metaTitle: "Case Study: Houston Plumber Grows Traffic 312% with Programmatic SEO | MeniPages",
+    metaDesc: "Inside look at how MeniPages helped a Houston plumbing company go from 180 to 741 monthly visitors in 6 months using programmatic SEO. Full breakdown included.",
+    category: "Case Studies",
+    date: "2025-01-15",
+    author: "MeniPages Team",
+    readTime: "7 min read",
+    featured: false,
+    excerpt: "A Houston plumbing company had a website and zero Google presence. Six months later: 741 monthly organic visitors, first-page rankings for 63 searches, and a phone that doesn't stop ringing.",
+    tags: ["case study", "plumber SEO", "Houston", "programmatic SEO", "results"],
+    content: `
+      <p>In July 2024, we started working with a second-generation plumbing company based in Houston, TX. They'd been in business for 22 years, had a decent reputation through word-of-mouth, and had a website — but were getting almost no traffic from Google.</p>
+      <p>The owner's frustration was real: "I know I'm better than the guys showing up above me on Google. I just can't figure out how they're doing it."</p>
+
+      <h2>The Starting Point</h2>
+      <p>When we ran their initial audit, here's what we found:</p>
+      <ul>
+        <li>180 monthly organic visitors (almost entirely branded — people searching the company name directly)</li>
+        <li>6 total indexed pages on their website</li>
+        <li>Ranking for 0 commercial keywords in the top 50</li>
+        <li>A homepage that said "Welcome to [Company Name] — Your Houston Plumbing Experts"</li>
+        <li>No service-specific pages, no neighborhood pages</li>
+      </ul>
+      <p>The site had good bones but gave Google nothing to rank it for beyond the business name.</p>
+
+      <h2>The Strategy</h2>
+      <p>We identified 847 keyword opportunities across three categories:</p>
+      <ul>
+        <li><strong>Service keywords:</strong> drain cleaning, water heater repair, leak detection, sewer line, etc.</li>
+        <li><strong>Location keywords:</strong> Houston, Katy, Sugar Land, The Woodlands, Pearland, Humble, etc.</li>
+        <li><strong>Service × Location combinations:</strong> "water heater replacement Katy TX," "drain cleaning Sugar Land," etc.</li>
+      </ul>
+      <p>We built 240 pages in the first 3 weeks — each targeting a specific combination. Service pages, neighborhood pages, and service-location pages that together created a blanket of coverage across the Houston metro.</p>
+
+      <h2>The Results (Month by Month)</h2>
+      <p><strong>Month 1:</strong> Pages indexed, 38 new keyword rankings appearing. Traffic: 210 (+17%).</p>
+      <p><strong>Month 2:</strong> Rankings strengthening, first page-1 appearances. Traffic: 287 (+59%).</p>
+      <p><strong>Month 3:</strong> Significant jump — 12 keywords now on page 1. Traffic: 391 (+117%).</p>
+      <p><strong>Month 4:</strong> Momentum building. 31 keywords on page 1. Traffic: 512 (+184%).</p>
+      <p><strong>Month 5:</strong> Competitors starting to notice. 48 keywords on page 1. Traffic: 634 (+252%).</p>
+      <p><strong>Month 6:</strong> 63 keywords on page 1, including "plumber Houston" at position 4. Traffic: 741 (+312%).</p>
+
+      <h2>The Business Impact</h2>
+      <p>The owner reports that inbound call volume from people who found them on Google has tripled. They've hired one additional technician to handle the increased workload. Their Google Ads spend has dropped by 40% because organic is now doing what ads used to do.</p>
+      <p>"I wish I'd done this two years ago," he told us after month 6. "The leads keep coming in and I'm not paying for each one."</p>
+
+      <h2>What Made It Work</h2>
+      <p>Three things drove the results: page specificity (every page was laser-focused on one search), internal linking (pages supporting each other's authority), and quality (each page provided genuinely useful information for its specific topic). There were no shortcuts.</p>
+    `
+  },
+  {
+    slug: "seo-vs-google-ads-small-business",
+    title: "SEO vs Google Ads for Small Business: Which Is Right for You in 2025?",
+    metaTitle: "SEO vs Google Ads for Small Business 2025 | MeniPages",
+    metaDesc: "Should your small business invest in SEO or Google Ads? We break down the costs, timelines, and ROI of both — and when to use each.",
+    category: "SEO Strategy",
+    date: "2024-12-20",
+    author: "MeniPages Team",
+    readTime: "9 min read",
+    featured: false,
+    excerpt: "The SEO vs Google Ads debate has a real answer — and it depends on where your business is right now. Here's how to make the right call.",
+    tags: ["SEO vs Google Ads", "PPC", "small business marketing", "ROI"],
+    content: `
+      <p>Every small business owner eventually faces this question: should I spend my limited marketing budget on SEO or Google Ads? The answer isn't universal — it depends on your timeline, budget, and goals. Here's a clear breakdown.</p>
+
+      <h2>How Google Ads Works</h2>
+      <p>Google Ads (formerly AdWords) lets you pay to appear at the top of search results for specific keywords. You set a budget, choose keywords, write ads, and pay each time someone clicks. Stop paying — stop showing up.</p>
+      <p><strong>Pros:</strong> Immediate visibility, precise targeting, measurable ROI, works from day one.</p>
+      <p><strong>Cons:</strong> Expensive (average $15-50 per click for competitive local service keywords), stops working the moment you pause your budget, increasingly competitive and costly year over year.</p>
+
+      <h2>How SEO Works</h2>
+      <p>SEO earns your ranking in the organic (non-paid) search results. It takes time to build but compounds indefinitely — and doesn't cost you anything per click.</p>
+      <p><strong>Pros:</strong> Compounds over time, free clicks once ranked, builds lasting asset value, often higher trust/click-through than ads.</p>
+      <p><strong>Cons:</strong> Takes 3-6 months to see meaningful results, requires consistent investment in content and optimization, not instantaneous.</p>
+
+      <h2>The Cost Comparison</h2>
+      <p>Let's say you're a plumber spending $2,000/month on Google Ads to get 40 leads at $50 per lead. Over 12 months, that's $24,000 for 480 leads — and when you stop paying, the leads stop.</p>
+      <p>A comparable SEO investment over 12 months might yield fewer leads initially (maybe 10 in month 3, 25 in month 6) but by month 12 you might be generating 50-60 organic leads per month — leads that continue even if you pause your SEO spend.</p>
+
+      <h2>When to Choose Google Ads</h2>
+      <ul>
+        <li>You need leads right now (new business, seasonal surge)</li>
+        <li>You have the budget to sustain it indefinitely</li>
+        <li>You're testing which services or locations are worth targeting before investing in SEO</li>
+        <li>Your market is extremely competitive and immediate visibility is worth the cost</li>
+      </ul>
+
+      <h2>When to Choose SEO</h2>
+      <ul>
+        <li>You're thinking 6-12 months ahead</li>
+        <li>You want to reduce your dependence on paid advertising</li>
+        <li>You serve multiple cities or offer multiple services (ideal for programmatic SEO)</li>
+        <li>You want to build a marketing asset that grows over time</li>
+      </ul>
+
+      <h2>The Smart Move: Both, Staged</h2>
+      <p>The most effective strategy we see: use Google Ads for immediate leads while you build SEO in parallel. As organic rankings develop and organic leads increase, reduce your ad spend proportionally. By month 12-18, many of our clients have cut their ad budgets by 50-70% while maintaining or growing their total lead volume.</p>
+      <p>The goal is to make Google Ads optional, not necessary. SEO is how you get there.</p>
+    `
+  }
+];
+</script>
+
+<!-- NAV -->
+<nav aria-label="Main navigation">
+  <a href="index.html" class="logo">Meni<span>Pages</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#how">How it Works</a></li>
+    <li><a href="index.html#pricing">Pricing</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="pseo-hub.html">pSEO Pages</a></li>
+    <li><a href="index.html#pricing" class="nav-cta">Get Started →</a></li>
+  </ul>
+</nav>
+
+<!-- BLOG HERO -->
+<div class="blog-hero" id="featured-hero">
+  <div>
+    <p class="hero-label">The MeniPages Blog</p>
+    <h1 class="hero-title">SEO That <em>Actually Works</em><br>for Small Business</h1>
+    <p class="hero-sub">Plain-English guides, real case studies, and growth strategies — from people who do this every day.</p>
+  </div>
+  <a href="#" class="featured-card" id="featured-post-link">
+    <span class="featured-badge">⬆ Featured Post</span>
+    <p class="featured-cat" id="feat-cat"></p>
+    <h2 class="featured-title" id="feat-title"></h2>
+    <p class="featured-excerpt" id="feat-excerpt"></p>
+    <div class="featured-meta">
+      <span id="feat-author"></span>
+      <span class="author-dot"></span>
+      <span id="feat-date"></span>
+      <span class="author-dot"></span>
+      <span id="feat-read"></span>
+    </div>
+  </a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="blog-layout">
+  <main>
+    <!-- FILTER BAR -->
+    <div class="filter-bar" id="filter-bar" role="group" aria-label="Filter by category"></div>
+
+    <!-- SEARCH -->
+    <div class="search-wrap">
+      <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" class="search-input" id="search-input" placeholder="Search articles..." aria-label="Search blog posts">
+    </div>
+
+    <!-- POST GRID -->
+    <div class="post-grid" id="post-grid" role="list"></div>
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside>
+    <div class="sidebar-block">
+      <h3 class="sidebar-title">Browse by Topic</h3>
+      <ul class="topic-list" id="topic-list"></ul>
+    </div>
+    <div class="cta-sidebar">
+      <h3>Get 500 Pages Built for You</h3>
+      <p>See how programmatic SEO can grow your business on autopilot — done entirely for you.</p>
+      <a href="index.html#pricing" class="btn-sm">View Plans →</a>
+    </div>
+    <div class="sidebar-block" style="margin-top:1.5rem">
+      <h3 class="sidebar-title">Try Our pSEO System</h3>
+      <p style="font-size:0.82rem;color:var(--sand);line-height:1.6;margin-bottom:1rem">See hundreds of auto-generated SEO pages for every niche and city in the US.</p>
+      <a href="pseo-hub.html" class="btn-sm" style="background:transparent;border:1px solid rgba(200,240,74,0.3);color:var(--lime)">Explore pSEO Hub →</a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <a href="index.html" class="logo">Meni<span>Pages</span></a>
+  <p>© 2025 MeniPages LLC. All rights reserved.</p>
+  <nav class="footer-links" aria-label="Footer navigation">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="pseo-hub.html">pSEO Hub</a>
+    <a href="index.html#pricing">Pricing</a>
+  </nav>
+</footer>
+
+<script>
+const posts = window.BLOG_POSTS;
+
+// ── FORMAT DATE ──
+function formatDate(d) {
+  return new Date(d).toLocaleDateString('en-US', { year:'numeric', month:'long', day:'numeric' });
+}
+
+// ── RENDER FEATURED ──
+const featured = posts.find(p => p.featured) || posts[0];
+document.getElementById('featured-post-link').href = `blog-post.html?slug=${featured.slug}`;
+document.getElementById('feat-cat').textContent = featured.category;
+document.getElementById('feat-title').textContent = featured.title;
+document.getElementById('feat-excerpt').textContent = featured.excerpt;
+document.getElementById('feat-author').textContent = featured.author;
+document.getElementById('feat-date').textContent = formatDate(featured.date);
+document.getElementById('feat-read').textContent = featured.readTime;
+
+// ── CATEGORIES ──
+const cats = ['All', ...new Set(posts.map(p => p.category))];
+const catCounts = {};
+posts.forEach(p => catCounts[p.category] = (catCounts[p.category] || 0) + 1);
+
+const filterBar = document.getElementById('filter-bar');
+cats.forEach(cat => {
+  const btn = document.createElement('button');
+  btn.className = 'filter-btn' + (cat === 'All' ? ' active' : '');
+  btn.textContent = cat;
+  btn.dataset.cat = cat;
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentCat = cat;
+    renderPosts();
+  });
+  filterBar.appendChild(btn);
+});
+
+// Topic sidebar
+const topicList = document.getElementById('topic-list');
+cats.filter(c => c !== 'All').forEach(cat => {
+  const li = document.createElement('li');
+  li.innerHTML = `<a href="#"><span>${cat}</span><span class="topic-count">${catCounts[cat]}</span></a>`;
+  li.querySelector('a').addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    [...document.querySelectorAll('.filter-btn')].find(b => b.dataset.cat === cat)?.classList.add('active');
+    currentCat = cat;
+    renderPosts();
+  });
+  topicList.appendChild(li);
+});
+
+// ── RENDER POSTS ──
+let currentCat = 'All';
+let searchQuery = '';
+
+function renderPosts() {
+  const grid = document.getElementById('post-grid');
+  const filtered = posts.filter(p => {
+    const matchCat = currentCat === 'All' || p.category === currentCat;
+    const q = searchQuery.toLowerCase();
+    const matchSearch = !q || p.title.toLowerCase().includes(q) || p.excerpt.toLowerCase().includes(q) || p.tags.some(t => t.toLowerCase().includes(q));
+    return matchCat && matchSearch;
+  });
+
+  grid.innerHTML = '';
+  if (!filtered.length) {
+    grid.innerHTML = `<div class="no-results"><h3>No articles found</h3><p>Try a different search or category.</p></div>`;
+    return;
+  }
+
+  filtered.forEach(post => {
+    const card = document.createElement('a');
+    card.href = `blog-post.html?slug=${post.slug}`;
+    card.className = 'post-card';
+    card.setAttribute('role', 'listitem');
+    card.innerHTML = `
+      <p class="post-cat">${post.category}</p>
+      <h3 class="post-title">${post.title}</h3>
+      <p class="post-excerpt">${post.excerpt}</p>
+      <div class="post-meta">
+        <span>${formatDate(post.date)}</span>
+        <span class="read-time">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          ${post.readTime}
+        </span>
+      </div>`;
+    grid.appendChild(card);
+  });
+}
+
+renderPosts();
+
+// ── SEARCH ──
+document.getElementById('search-input').addEventListener('input', e => {
+  searchQuery = e.target.value;
+  renderPosts();
+});
+</script>
+</body>
+</html>
