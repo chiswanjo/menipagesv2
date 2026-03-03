@@ -18,6 +18,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:ital,wght@0,300;0,700;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='14' fill='%230D2818'/%3E%3Ctext x='50' y='72' font-family='Arial Black,sans-serif' font-size='58' font-weight='900' fill='%23C8F04A' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='14' fill='%230D2818'/%3E%3Ctext x='50' y='72' font-family='Arial Black,sans-serif' font-size='58' font-weight='900' fill='%23C8F04A' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#070F05">
 <style>
 :root {
   --ink: #070F05; --forest: #0D2818; --moss: #1A4030;
@@ -31,63 +34,46 @@ nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   padding: 1.25rem 4rem;
-  background: rgba(7,15,5,0.9); backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(200,240,74,0.1);
+  background: rgba(7,15,5,0.95); backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(200,240,74,0.12);
 }
-.logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.05em; color: var(--lime); text-decoration: none; }
+.logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.05em; color: var(--lime); text-decoration: none; flex-shrink: 0; }
 .logo span { color: var(--cream); }
-.nav-links { list-style: none; display: flex; gap: 2.5rem; align-items: center; }
-.nav-links a { color: var(--sand); text-decoration: none; font-size: 0.875rem; letter-spacing: 0.05em; transition: color 0.2s; }
-.nav-links a:hover { color: var(--lime); }
-.nav-cta { background: var(--lime); color: var(--ink) !important; padding: 0.6rem 1.5rem; border-radius: 4px; font-weight: 500; }
+.nav-links { list-style: none; display: flex; gap: 0.25rem; align-items: center; }
+.nav-links a { color: var(--cream); text-decoration: none; font-size: 0.875rem; letter-spacing: 0.03em; padding: 0.45rem 0.9rem; border-radius: 6px; transition: color 0.2s, background 0.2s; white-space: nowrap; }
+.nav-links a:hover { color: var(--lime); background: rgba(200,240,74,0.07); }
+.nav-cta { background: var(--lime) !important; color: var(--ink) !important; font-weight: 500; }
+.nav-cta:hover { box-shadow: 0 4px 20px rgba(200,240,74,0.35); }
 
-/* BREADCRUMB */
 .breadcrumb { padding: 7rem 4rem 0; display: flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: var(--muted); flex-wrap: wrap; }
 .breadcrumb a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
 .breadcrumb a:hover { color: var(--lime); }
 .breadcrumb-sep { opacity: 0.5; }
 
-/* HERO */
 .page-hero {
   padding: 2rem 4rem 5rem;
-  display: grid;
-  grid-template-columns: 1fr 360px;
-  gap: 5rem;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
+  display: grid; grid-template-columns: 1fr 360px;
+  gap: 5rem; align-items: center;
+  position: relative; overflow: hidden;
 }
 .page-hero::before {
-  content: '';
-  position: absolute; top: -30%; right: -5%; width: 50vw; height: 50vw;
+  content: ''; position: absolute; top: -30%; right: -5%; width: 50vw; height: 50vw;
   background: radial-gradient(circle, rgba(26,64,48,0.5) 0%, transparent 70%);
   pointer-events: none;
 }
-
 .hero-eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--lime); background: rgba(200,240,74,0.08); padding: 0.4rem 1rem; border-radius: 999px; border: 1px solid rgba(200,240,74,0.2); margin-bottom: 1.5rem; }
 .page-h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 4vw, 4.5rem); line-height: 0.95; letter-spacing: 0.02em; margin-bottom: 1.25rem; }
-.page-h1 em { font-family: 'Fraunces', serif; font-style: italic; font-weight: 300; color: var(--lime); }
 .page-intro { font-size: 1rem; line-height: 1.7; color: var(--sand); margin-bottom: 2rem; max-width: 520px; }
-
 .hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-bottom: 2.5rem; }
 .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--lime); color: var(--ink); padding: 0.875rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: all 0.2s; }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,240,74,0.35); }
 .btn-ghost { color: var(--cream); text-decoration: none; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.4rem; opacity: 0.65; transition: opacity 0.2s; }
 .btn-ghost:hover { opacity: 1; }
-
 .hero-stats { display: flex; gap: 2rem; }
 .stat strong { display: block; font-family: 'Bebas Neue', sans-serif; font-size: 2.25rem; color: var(--lime); line-height: 1; }
 .stat span { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
 
-/* HERO CARD */
-.hero-preview {
-  background: var(--forest);
-  border-radius: 14px;
-  padding: 1.75rem;
-  border: 1px solid rgba(200,240,74,0.15);
-  position: relative;
-  z-index: 1;
-}
+.hero-preview { background: var(--forest); border-radius: 14px; padding: 1.75rem; border: 1px solid rgba(200,240,74,0.15); position: relative; z-index: 1; }
 .preview-badge { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; background: rgba(200,240,74,0.1); color: var(--lime); padding: 0.25rem 0.75rem; border-radius: 999px; margin-bottom: 1.25rem; }
 .preview-url { font-size: 0.65rem; color: var(--lime); opacity: 0.7; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
 .preview-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; line-height: 1.3; margin-bottom: 0.75rem; }
@@ -99,13 +85,11 @@ nav {
 .score-label { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
 .score-val { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--lime); line-height: 1; }
 
-/* SERVICES SECTION */
 .services-section { padding: 5rem 4rem; background: var(--forest); }
 .section-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--lime); margin-bottom: 0.75rem; }
 .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 3.5vw, 3.5rem); line-height: 1; letter-spacing: 0.02em; margin-bottom: 1rem; }
 .section-title em { font-family: 'Fraunces', serif; font-style: italic; font-weight: 300; color: var(--lime); }
 .section-desc { font-size: 0.95rem; line-height: 1.7; color: var(--sand); max-width: 540px; margin-bottom: 3rem; }
-
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 .service-card { background: var(--ink); border-radius: 10px; padding: 1.5rem; border: 1px solid rgba(255,255,255,0.05); transition: border-color 0.3s; }
 .service-card:hover { border-color: rgba(200,240,74,0.2); }
@@ -113,7 +97,6 @@ nav {
 .service-card h3 { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
 .service-card p { font-size: 0.82rem; color: var(--sand); line-height: 1.6; }
 
-/* WHY RANK */
 .why-section { padding: 5rem 4rem; }
 .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
 .why-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
@@ -122,22 +105,17 @@ nav {
 .why-item strong { display: block; font-size: 0.9rem; color: var(--cream); margin-bottom: 0.25rem; }
 .why-item p { font-size: 0.82rem; color: var(--sand); line-height: 1.5; }
 
-/* PAGES PREVIEW */
 .pages-preview { background: var(--ink); border-radius: 14px; border: 1px solid rgba(255,255,255,0.06); overflow: hidden; }
 .pp-header { padding: 1rem 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 0.5rem; }
 .dot { width: 8px; height: 8px; border-radius: 50%; }
-.dot-r { background: #FF5F57; }
-.dot-y { background: #FEBC2E; }
-.dot-g { background: #28C840; }
+.dot-r { background: #FF5F57; } .dot-y { background: #FEBC2E; } .dot-g { background: #28C840; }
 .pp-url { font-size: 0.7rem; color: var(--muted); margin-left: 0.5rem; font-family: monospace; }
-.pp-row { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.04); }
+.pp-row { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.04); gap: 0.5rem; }
 .pp-row:last-child { border-bottom: none; }
-.pp-page { font-size: 0.75rem; color: var(--sand); font-family: monospace; }
-.pp-rank { font-size: 0.7rem; font-weight: 500; display: flex; align-items: center; gap: 0.3rem; }
-.pp-rank.top { color: var(--lime); }
-.pp-rank.mid { color: var(--sand); }
+.pp-page { font-size: 0.72rem; color: var(--sand); font-family: monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pp-rank { font-size: 0.7rem; font-weight: 500; display: flex; align-items: center; gap: 0.3rem; flex-shrink: 0; }
+.pp-rank.top { color: var(--lime); } .pp-rank.mid { color: var(--sand); }
 
-/* FAQ */
 .faq-section { padding: 5rem 4rem; background: var(--forest); }
 .faq-wrap { max-width: 680px; }
 .faq-item { border-bottom: 1px solid rgba(255,255,255,0.07); }
@@ -146,20 +124,19 @@ nav {
 .faq-chevron { color: var(--lime); font-size: 1.1rem; transition: transform 0.3s; flex-shrink: 0; }
 .faq-a { max-height: 0; overflow: hidden; font-size: 0.875rem; line-height: 1.7; color: var(--sand); transition: max-height 0.4s ease, padding 0.3s; }
 .faq-item.open .faq-chevron { transform: rotate(45deg); }
-.faq-item.open .faq-a { max-height: 200px; padding-bottom: 1.25rem; }
+.faq-item.open .faq-a { max-height: 300px; padding-bottom: 1.25rem; }
 
-/* LOCAL CTA */
 .local-cta { padding: 5rem 4rem; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
 .cta-text h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 4vw, 4rem); line-height: 1; letter-spacing: 0.02em; margin-bottom: 1rem; }
 .cta-text h2 em { font-family: 'Fraunces', serif; font-style: italic; font-weight: 300; color: var(--lime); }
 .cta-text p { font-size: 0.95rem; line-height: 1.7; color: var(--sand); margin-bottom: 2rem; }
 .cta-cards { display: flex; flex-direction: column; gap: 1rem; }
-.cta-card { background: var(--forest); border-radius: 10px; padding: 1.25rem 1.5rem; border: 1px solid rgba(200,240,74,0.08); display: flex; align-items: center; justify-content: space-between; }
-.cta-card-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 700; }
+.cta-card { background: var(--forest); border-radius: 10px; padding: 1.25rem 1.5rem; border: 1px solid rgba(200,240,74,0.08); display: flex; align-items: center; justify-content: space-between; text-decoration: none; transition: border-color 0.2s, transform 0.2s; }
+.cta-card:hover { border-color: rgba(200,240,74,0.3); transform: translateY(-2px); }
+.cta-card-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 700; color: var(--cream); }
 .cta-card-sub { font-size: 0.78rem; color: var(--muted); }
 .plan-price { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--lime); }
 
-/* NEARBY SECTION */
 .nearby-section { padding: 3rem 4rem 5rem; }
 .nearby-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 0.02em; margin-bottom: 1.5rem; }
 .nearby-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.75rem; }
@@ -167,8 +144,7 @@ nav {
 .nearby-link:hover { border-color: rgba(200,240,74,0.25); color: var(--lime); transform: translateY(-2px); }
 .nearby-link span { display: block; font-size: 0.68rem; color: var(--muted); margin-top: 0.2rem; }
 
-/* HUB BACK */
-.back-bar { background: var(--forest); border-top: 1px solid rgba(200,240,74,0.08); border-bottom: 1px solid rgba(200,240,74,0.08); padding: 1.25rem 4rem; display: flex; align-items: center; gap: 2rem; }
+.back-bar { background: var(--forest); border-top: 1px solid rgba(200,240,74,0.08); border-bottom: 1px solid rgba(200,240,74,0.08); padding: 1.25rem 4rem; display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
 .back-bar a { color: var(--sand); text-decoration: none; font-size: 0.82rem; display: flex; align-items: center; gap: 0.4rem; transition: color 0.2s; }
 .back-bar a:hover { color: var(--lime); }
 .back-sep { width: 1px; height: 18px; background: rgba(255,255,255,0.08); }
@@ -184,6 +160,7 @@ footer p { font-size: 0.8rem; color: var(--muted); }
   .nav-links { display: none; }
   .breadcrumb { padding: 6rem 1.5rem 0; }
   .page-hero { grid-template-columns: 1fr; padding: 2rem 1.5rem 3rem; gap: 2rem; }
+  .hero-preview { display: none; }
   .services-section, .why-section, .faq-section, .local-cta, .nearby-section { padding: 3rem 1.5rem; }
   .services-grid { grid-template-columns: 1fr; }
   .why-grid, .local-cta { grid-template-columns: 1fr; }
@@ -195,7 +172,6 @@ footer p { font-size: 0.8rem; color: var(--muted); }
 </head>
 <body>
 
-<!-- NAV -->
 <nav aria-label="Main navigation">
   <a href="index.html" class="logo">Meni<span>Pages</span></a>
   <ul class="nav-links">
@@ -207,7 +183,11 @@ footer p { font-size: 0.8rem; color: var(--muted); }
   </ul>
 </nav>
 
-<div id="page-content"></div>
+<div id="page-content">
+  <div style="display:flex;align-items:center;justify-content:center;min-height:80vh;color:#6B7A6A;font-family:'DM Sans',sans-serif;">
+    <p>Loading…</p>
+  </div>
+</div>
 
 <footer role="contentinfo">
   <a href="index.html" class="logo">Meni<span>Pages</span></a>
@@ -220,267 +200,271 @@ footer p { font-size: 0.8rem; color: var(--muted); }
   </nav>
 </footer>
 
-<!-- ════════════════════════════════════
-  pSEO TEMPLATE ENGINE — Renders from URL params
-  URL format: pseo-page.html?niche=plumber&city=Houston&state=TX
-  ════════════════════════════════════ -->
 <script>
+// ─────────────────────────────────────────────────────────
+//  STEP 1: Read URL params BEFORE any data definitions
+// ─────────────────────────────────────────────────────────
+const params    = new URLSearchParams(window.location.search);
+const nicheSlug = params.get('niche') || 'plumber';
+const city      = params.get('city')  || 'Houston';
+const state     = params.get('state') || 'TX';
+
+// ─────────────────────────────────────────────────────────
+//  STEP 2: Niche data — ALL strings are arrow functions
+//  so they receive (city, state) fresh at render time.
+//  Nothing is evaluated at object-creation time.
+// ─────────────────────────────────────────────────────────
 const NICHES = {
-  "plumber": {
-    label: "Plumbers", plural: "Plumbing Services",
-    headline: (city, state) => `SEO for Plumbers in ${city}, ${state}`,
-    subhead: (city, state) => `Get Your Plumbing Business to the Top of Google in ${city}`,
-    intro: (city, state) => `When a homeowner in ${city} searches "plumber near me" or "emergency plumber ${city} ${state}" — is your business showing up? If not, you're invisible to thousands of potential customers every month. MeniPages builds hundreds of targeted SEO pages for plumbers in ${city} so you rank for every search your customers make.`,
-    services: [
-      { name: "Drain Cleaning SEO", desc: `Rank for every drain cleaning search in ${city} and surrounding neighborhoods.` },
-      { name: "Water Heater Repair SEO", desc: `Capture high-intent searches from ${city} homeowners needing water heater repair.` },
-      { name: "Leak Detection SEO", desc: `Show up when ${city} residents search for leak detection services.` },
-      { name: "Pipe Repair SEO", desc: `Rank for pipe repair and replacement searches across the ${city} metro.` },
-      { name: "Emergency Plumber SEO", desc: `Win the highest-converting searches: "emergency plumber ${city}" and "24/7 plumber."` },
-      { name: "Sewer Line SEO", desc: `Target sewer line repair and inspection searches in ${city}, ${state}.` }
-    ],
-    whyPoints: [
-      { title: `${city} homeowners search Google before calling`, body: `97% of people research local services online first. If you're not on page 1, they'll call your competitor.` },
-      { title: "Emergency searches convert instantly", body: `Plumbing emergency searches have the highest buyer intent of any local service. Ranking for them drives immediate calls.` },
-      { title: "Every neighborhood needs its own page", body: `"Plumber in ${city}" and "plumber in [${city} neighborhood]" are different searches. We build a page for each one.` }
-    ],
-    faq: (city, state) => [
-      { q: `How long before my plumbing business ranks on Google in ${city}?`, a: `Most clients start seeing rankings appear in weeks 4-8. By month 3-4 you'll see meaningful traffic growth. The ${city} plumbing market is competitive, but targeted pages for each service and neighborhood will get you ranking faster than broad terms.` },
-      { q: `How many pages do you build for a plumber in ${city}?`, a: `Typically 150-500 pages depending on your plan. For ${city} we'd cover every major service (drain cleaning, water heaters, pipes, etc.) × every neighborhood and suburb, plus broader metro-level pages for high-volume searches.` },
-      { q: `Do the pages work for the whole ${city} metro area?`, a: `Yes. We build pages for ${city} itself plus surrounding cities like the suburbs and nearby areas your business actually serves. Coverage across the metro means more total traffic.` }
-    ],
-    nearbyNiches: ["Electricians", "HVAC Companies", "Roofing Companies"]
+  plumber: {
+    label: 'Plumbers', plural: 'Plumbing Services',
+    headline:  function(c,s){ return 'SEO for Plumbers in '+c+', '+s; },
+    subhead:   function(c){   return 'Get Your Plumbing Business to the Top of Google in '+c; },
+    intro:     function(c,s){ return 'When a homeowner in '+c+' searches "plumber near me" or "emergency plumber '+c+' '+s+'" — is your business showing up? If not, you\'re invisible to thousands of potential customers every month. MeniPages builds hundreds of targeted SEO pages for plumbers in '+c+' so you rank for every search your customers make.'; },
+    services:  function(c,s){ return [
+      { name:'Drain Cleaning SEO',       desc:'Rank for every drain cleaning search in '+c+' and surrounding neighbourhoods.' },
+      { name:'Water Heater Repair SEO',  desc:'Capture high-intent searches from '+c+' homeowners needing water heater repair.' },
+      { name:'Leak Detection SEO',       desc:'Show up when '+c+' residents search for leak detection services.' },
+      { name:'Pipe Repair SEO',          desc:'Rank for pipe repair and replacement searches across the '+c+' metro.' },
+      { name:'Emergency Plumber SEO',    desc:'Win the highest-converting searches: "emergency plumber '+c+'" and "24/7 plumber."' },
+      { name:'Sewer Line SEO',           desc:'Target sewer line repair and inspection searches in '+c+', '+s+'.' },
+    ]; },
+    whyPoints: function(c){ return [
+      { title:c+' homeowners search Google before calling',   body:'97% of people research local services online first. If you\'re not on page 1, they\'ll call your competitor.' },
+      { title:'Emergency searches convert instantly',          body:'Plumbing emergencies have the highest buyer intent of any local service. Ranking for them drives immediate calls.' },
+      { title:'Every neighbourhood needs its own page',        body:'"Plumber in '+c+'" and "plumber in ['+c+' neighbourhood]" are different searches. We build a page for each one.' },
+    ]; },
+    faq: function(c,s){ return [
+      { q:'How long before my plumbing business ranks in '+c+'?',  a:'Most clients see rankings appear in weeks 4–8. By month 3–4 you\'ll see meaningful traffic growth. The '+c+' market is competitive, but targeted pages for each service and neighbourhood get you ranking faster than broad terms.' },
+      { q:'How many pages do you build for a plumber in '+c+'?',   a:'Typically 150–500 pages depending on your plan. For '+c+' we cover every major service × every neighbourhood and suburb, plus broader metro-level pages for high-volume searches.' },
+      { q:'Do the pages work for the whole '+c+' metro area?',     a:'Yes. We build pages for '+c+' itself plus surrounding cities and suburbs your business actually serves. Metro-wide coverage means more total traffic.' },
+    ]; },
   },
-  "dentist": {
-    label: "Dentists", plural: "Dental Practices",
-    headline: (city, state) => `SEO for Dentists in ${city}, ${state}`,
-    subhead: (city, state) => `Attract More New Patients from Google in ${city}`,
-    intro: (city, state) => `New patients in ${city} choose their dentist the same way they choose any local service: they search Google, click the first few results, and call. MeniPages builds a network of SEO pages for your dental practice so you show up for every procedure, every neighborhood, and every search your ideal patients make in ${city}, ${state}.`,
-    services: [
-      { name: "General Dentistry SEO", desc: `Rank for "dentist in ${city}" and "family dentist ${city}" to capture broad patient searches.` },
-      { name: "Dental Implant SEO", desc: `Target high-value searches from ${city} patients researching dental implants.` },
-      { name: "Invisalign SEO", desc: `Show up for Invisalign and clear aligner searches across ${city}.` },
-      { name: "Cosmetic Dentistry SEO", desc: `Rank for veneers, teeth whitening, and smile makeover searches in ${city}.` },
-      { name: "Emergency Dental SEO", desc: `Capture urgent, high-converting searches: "emergency dentist ${city}" and "tooth pain ${city}."` },
-      { name: "Pediatric Dentistry SEO", desc: `Rank for children's dentist and pediatric dentistry searches in ${city} neighborhoods.` }
-    ],
-    whyPoints: [
-      { title: `${city} patients research before choosing a dentist`, body: `77% of patients use online search to find new healthcare providers. Ranking on page 1 in ${city} is essential for new patient acquisition.` },
-      { title: "High-value procedures have high-value searches", body: `"Dental implants ${city}" and "Invisalign ${city}" searches come from patients ready to spend $3,000-$8,000. Ranking for these is extremely valuable.` },
-      { title: "Competition in ${city} is real but beatable", body: `Most dental practices in ${city} rely on word-of-mouth or pay-per-click. Programmatic SEO is still underutilized — meaning first movers win.` }
-    ],
-    faq: (city, state) => [
-      { q: `How does SEO for dentists in ${city} work?`, a: `We build dedicated pages for every dental service you offer, targeting ${city} specifically. Each page is optimized for search intent — so a patient searching "dental implants ${city}" finds a page about exactly that, not a generic homepage.` },
-      { q: `Can you help a new dental practice get found in ${city}?`, a: `Yes. Programmatic SEO is particularly effective for new practices because it generates a large number of indexed pages quickly, giving Google many entry points to your practice before word-of-mouth has time to build.` }
-    ],
-    nearbyNiches: ["Chiropractors", "Gyms & Fitness", "Law Firms"]
+
+  dentist: {
+    label: 'Dentists', plural: 'Dental Practices',
+    headline:  function(c,s){ return 'SEO for Dentists in '+c+', '+s; },
+    subhead:   function(c){   return 'Attract More New Patients from Google in '+c; },
+    intro:     function(c,s){ return 'New patients in '+c+' choose their dentist the same way they choose any local service: they search Google, click the first few results, and call. MeniPages builds a network of SEO pages for your dental practice so you show up for every procedure, every neighbourhood, and every search your ideal patients make in '+c+', '+s+'.'; },
+    services:  function(c,s){ return [
+      { name:'General Dentistry SEO',   desc:'Rank for "dentist in '+c+'" and "family dentist '+c+'" to capture broad patient searches.' },
+      { name:'Dental Implant SEO',      desc:'Target high-value searches from '+c+' patients researching dental implants.' },
+      { name:'Invisalign SEO',          desc:'Show up for Invisalign and clear aligner searches across '+c+'.' },
+      { name:'Cosmetic Dentistry SEO',  desc:'Rank for veneers, teeth whitening, and smile makeover searches in '+c+'.' },
+      { name:'Emergency Dental SEO',    desc:'Capture urgent searches: "emergency dentist '+c+'" and "tooth pain '+c+'."' },
+      { name:'Pediatric Dentistry SEO', desc:'Rank for children\'s dentist searches in '+c+' neighbourhoods.' },
+    ]; },
+    whyPoints: function(c){ return [
+      { title:c+' patients research online before choosing a dentist', body:'77% of patients use online search to find new healthcare providers. Ranking on page 1 in '+c+' is essential for new patient acquisition.' },
+      { title:'High-value procedures have high-value searches',         body:'"Dental implants '+c+'" and "Invisalign '+c+'" searches come from patients ready to spend $3,000–$8,000. Ranking for these is extremely valuable.' },
+      { title:'Competition in '+c+' is real but beatable',             body:'Most dental practices in '+c+' rely on word-of-mouth or pay-per-click. Programmatic SEO is still underutilised — first movers win.' },
+    ]; },
+    faq: function(c,s){ return [
+      { q:'How does SEO for dentists in '+c+' work?',             a:'We build dedicated pages for every dental service you offer, targeting '+c+' specifically. Each page is optimised for search intent — so a patient searching "dental implants '+c+'" finds a page about exactly that, not a generic homepage.' },
+      { q:'Can you help a new dental practice get found in '+c+'?', a:'Yes. Programmatic SEO is particularly effective for new practices because it generates a large number of indexed pages quickly, giving Google many entry points to your practice before word-of-mouth has time to build.' },
+    ]; },
   },
-  "lawyer": {
-    label: "Lawyers", plural: "Law Firms",
-    headline: (city, state) => `SEO for Lawyers & Law Firms in ${city}, ${state}`,
-    subhead: (city, state) => `Rank on Google and Win More Clients in ${city}`,
-    intro: (city, state) => `Legal clients in ${city} search Google when they need help most — after an accident, during a divorce, facing criminal charges. MeniPages builds targeted SEO pages for your law firm so you appear at the top of Google the moment potential clients in ${city}, ${state} search for the legal help you provide.`,
-    services: [
-      { name: "Personal Injury SEO", desc: `Rank for car accident, slip and fall, and personal injury searches across ${city}.` },
-      { name: "Family Law SEO", desc: `Capture divorce, child custody, and family law searches from ${city} residents.` },
-      { name: "Criminal Defense SEO", desc: `Show up for DUI, criminal defense, and expungement searches in ${city}.` },
-      { name: "Estate Planning SEO", desc: `Rank for will, trust, and estate planning searches in the ${city} area.` },
-      { name: "Business Law SEO", desc: `Target contract, business formation, and commercial litigation searches in ${city}.` },
-      { name: "Immigration Law SEO", desc: `Capture immigration and visa consultation searches from ${city} communities.` }
-    ],
-    whyPoints: [
-      { title: "Legal searches have the highest intent", body: "People searching 'personal injury lawyer ${city}' need help now. Ranking for these searches delivers cases, not just traffic." },
-      { title: "One client can be worth $10,000+", body: "The ROI on ranking for legal searches is extraordinary. A single personal injury case won from organic traffic can pay for years of SEO investment." },
-      { title: "Most ${city} law firms still rely on referrals", body: "The majority of law firms haven't invested seriously in SEO. That's your opportunity — the firms that rank on page 1 own the market." }
-    ],
-    faq: (city, state) => [
-      { q: `Is SEO effective for law firms in ${city}?`, a: `Extremely. Legal searches are some of the highest-converting on Google. In ${city}, someone searching "personal injury attorney" or "DUI lawyer" is typically ready to contact a firm that same day. Ranking on page 1 delivers qualified leads consistently.` },
-      { q: `How do you make each law firm page unique?`, a: `Each page targets a specific practice area and location. "Personal injury lawyer ${city}" is a different page from "car accident attorney ${city} Heights." We cover every meaningful variation to maximize coverage.` }
-    ],
-    nearbyNiches: ["Accountants", "Real Estate Agents", "Chiropractors"]
+
+  lawyer: {
+    label: 'Law Firms', plural: 'Law Firms',
+    headline:  function(c,s){ return 'SEO for Lawyers & Law Firms in '+c+', '+s; },
+    subhead:   function(c){   return 'Rank on Google and Win More Clients in '+c; },
+    intro:     function(c,s){ return 'Legal clients in '+c+' search Google when they need help most — after an accident, during a divorce, facing criminal charges. MeniPages builds targeted SEO pages for your law firm so you appear at the top of Google the moment potential clients in '+c+', '+s+' search for the legal help you provide.'; },
+    services:  function(c,s){ return [
+      { name:'Personal Injury SEO',  desc:'Rank for car accident, slip and fall, and personal injury searches across '+c+'.' },
+      { name:'Family Law SEO',       desc:'Capture divorce, child custody, and family law searches from '+c+' residents.' },
+      { name:'Criminal Defense SEO', desc:'Show up for DUI, criminal defense, and expungement searches in '+c+'.' },
+      { name:'Estate Planning SEO',  desc:'Rank for will, trust, and estate planning searches in the '+c+' area.' },
+      { name:'Business Law SEO',     desc:'Target contract, business formation, and commercial litigation searches in '+c+'.' },
+      { name:'Immigration Law SEO',  desc:'Capture immigration and visa consultation searches from '+c+' communities.' },
+    ]; },
+    whyPoints: function(c){ return [
+      { title:'Legal searches have the highest intent',         body:'People searching "personal injury lawyer '+c+'" need help now. Ranking for these searches delivers cases, not just traffic.' },
+      { title:'One client can be worth $10,000+',              body:'The ROI on ranking for legal searches is extraordinary. A single personal injury case won from organic traffic can pay for years of SEO investment.' },
+      { title:'Most '+c+' law firms still rely on referrals',  body:'The majority of law firms in '+c+' haven\'t invested seriously in SEO. That\'s your opportunity — the firms that rank on page 1 own the market.' },
+    ]; },
+    faq: function(c,s){ return [
+      { q:'Is SEO effective for law firms in '+c+'?',   a:'Extremely. Legal searches are some of the highest-converting on Google. In '+c+', someone searching "personal injury attorney" or "DUI lawyer" is typically ready to contact a firm that same day. Ranking on page 1 delivers qualified leads consistently.' },
+      { q:'How do you make each law firm page unique?', a:'Each page targets a specific practice area and location. "Personal injury lawyer '+c+'" is a different page from "car accident attorney '+c+' Heights." We cover every meaningful variation to maximise coverage.' },
+    ]; },
   },
-  "accountant": {
-    label: "Accountants", plural: "Accounting Firms",
-    headline: (city, state) => `SEO for Accountants & CPAs in ${city}, ${state}`,
-    subhead: (city, state) => `Get Your Accounting Firm Found on Google in ${city}`,
-    intro: (city, state) => `Small business owners and individuals in ${city} search for CPAs and accountants when tax season hits, when they're starting a business, or when they need financial guidance. MeniPages builds targeted SEO pages so your accounting firm appears at the top of Google searches in ${city}, ${state} — turning searchers into clients.`,
-    services: [
-      { name: "Tax Preparation SEO", desc: `Rank for individual and business tax preparation searches across ${city}.` },
-      { name: "Bookkeeping SEO", desc: `Capture small business bookkeeping searches from ${city} entrepreneurs.` },
-      { name: "Payroll Services SEO", desc: `Show up for payroll and HR services searches in ${city}.` },
-      { name: "Business Advisory SEO", desc: `Rank for CFO services and business advisory searches in ${city}.` },
-      { name: "IRS Representation SEO", desc: `Target IRS audit and tax problem resolution searches in ${city}.` },
-      { name: "CPA for Small Business SEO", desc: `Rank for "CPA for small business ${city}" and related searches.` }
-    ],
-    whyPoints: [
-      { title: "Tax season generates massive search volume", body: `Every year, millions of ${city} residents and businesses search for tax help. Ranking in advance of tax season captures this surge.` },
-      { title: "Clients stay for years", body: "Accounting clients have high lifetime value. One client won from organic search might pay $2,000-$10,000+ per year for years." },
-      { title: "Most CPA firms have weak SEO", body: `The majority of accounting firms in ${city} haven't invested in SEO. Early movers gain a durable competitive advantage.` }
-    ],
-    faq: (city, state) => [
-      { q: `How many people search for accountants in ${city}?`, a: `Thousands per month, with significant spikes around tax season (Jan-April) and business fiscal year-ends. Building your rankings before peak season means capturing this traffic when search intent is highest.` },
-      { q: `Should my accounting firm target individuals or businesses?`, a: `Both. We build separate pages for each audience — individual tax prep, small business accounting, corporate services — so you capture every relevant search in ${city}, regardless of who's searching.` }
-    ],
-    nearbyNiches: ["Law Firms", "Real Estate Agents", "Plumbers"]
+
+  accountant: {
+    label: 'Accountants', plural: 'Accounting Firms',
+    headline:  function(c,s){ return 'SEO for Accountants & CPAs in '+c+', '+s; },
+    subhead:   function(c){   return 'Get Your Accounting Firm Found on Google in '+c; },
+    intro:     function(c,s){ return 'Small business owners and individuals in '+c+' search for CPAs and accountants when tax season hits, when they\'re starting a business, or when they need financial guidance. MeniPages builds targeted SEO pages so your accounting firm appears at the top of Google searches in '+c+', '+s+' — turning searchers into clients.'; },
+    services:  function(c,s){ return [
+      { name:'Tax Preparation SEO',    desc:'Rank for individual and business tax preparation searches across '+c+'.' },
+      { name:'Bookkeeping SEO',        desc:'Capture small business bookkeeping searches from '+c+' entrepreneurs.' },
+      { name:'Payroll Services SEO',   desc:'Show up for payroll and HR services searches in '+c+'.' },
+      { name:'Business Advisory SEO',  desc:'Rank for CFO services and business advisory searches in '+c+'.' },
+      { name:'IRS Representation SEO', desc:'Target IRS audit and tax problem resolution searches in '+c+'.' },
+      { name:'CPA for Small Business', desc:'Rank for "CPA for small business '+c+'" and related searches.' },
+    ]; },
+    whyPoints: function(c){ return [
+      { title:'Tax season generates massive search volume',   body:'Every year, millions of '+c+' residents and businesses search for tax help. Ranking before peak season captures this surge.' },
+      { title:'Clients stay for years',                       body:'Accounting clients have high lifetime value. One client won from organic search might pay $2,000–$10,000+ per year for years.' },
+      { title:'Most CPA firms in '+c+' have weak SEO',       body:'The majority of accounting firms in '+c+' haven\'t invested in SEO. Early movers gain a durable competitive advantage.' },
+    ]; },
+    faq: function(c,s){ return [
+      { q:'How many people search for accountants in '+c+'?',  a:'Thousands per month, with significant spikes around tax season (Jan–April) and business fiscal year-ends. Building your rankings before peak season means capturing this traffic when search intent is highest.' },
+      { q:'Should my accounting firm target individuals or businesses?', a:'Both. We build separate pages for each audience — individual tax prep, small business accounting, corporate services — so you capture every relevant search in '+c+', regardless of who\'s searching.' },
+    ]; },
   },
-  "hvac": {
-    label: "HVAC", plural: "HVAC Companies",
-    headline: (city, state) => `SEO for HVAC Companies in ${city}, ${state}`,
-    subhead: (city, state) => `Rank on Google & Get More HVAC Service Calls in ${city}`,
-    intro: (city, state) => `When the AC breaks in the middle of a ${city} summer or the furnace fails on a cold winter night, homeowners don't ask friends for a recommendation — they search Google. MeniPages builds hundreds of targeted SEO pages for HVAC companies in ${city} so you show up when customers need you most.`,
-    services: [
-      { name: "AC Repair SEO", desc: `Rank for air conditioning repair and emergency AC searches across ${city}.` },
-      { name: "Furnace Installation SEO", desc: `Capture furnace and heating installation searches from ${city} homeowners.` },
-      { name: "Heat Pump SEO", desc: `Show up for heat pump installation and service searches in ${city}.` },
-      { name: "AC Maintenance SEO", desc: `Rank for HVAC tune-up and maintenance agreement searches in ${city}.` },
-      { name: "Emergency HVAC SEO", desc: `Win the highest-converting searches: "emergency HVAC ${city}" and "24/7 AC repair."` },
-      { name: "Commercial HVAC SEO", desc: `Target commercial HVAC and building maintenance searches across ${city}.` }
-    ],
-    whyPoints: [
-      { title: "Seasonal demand means time-sensitive ranking", body: `HVAC searches spike dramatically in summer and winter. Having your pages ranked before peak season means capturing demand when it's highest.` },
-      { title: "Emergency searches convert at 90%+", body: `Someone searching "AC repair ${city}" in July is calling the first plausible result they find. Ranking is everything.` },
-      { title: "Average HVAC job is $1,500-$8,000", body: "The ROI on a single new HVAC installation client won from organic search pays for months of SEO service." }
-    ],
-    faq: (city, state) => [
-      { q: `How quickly can my HVAC company rank in ${city}?`, a: `We see rankings start appearing in weeks 4-8 for many HVAC-related searches. Long-tail terms like specific equipment models or neighborhood-level searches often rank fastest. By month 3, expect meaningful traffic growth.` },
-      { q: `Do you target commercial or residential HVAC in ${city}?`, a: `Both, depending on your business focus. We build separate page sets for residential and commercial HVAC searches in ${city} so you capture every relevant customer type.` }
-    ],
-    nearbyNiches: ["Plumbers", "Electricians", "Roofing Companies"]
+
+  hvac: {
+    label: 'HVAC Companies', plural: 'HVAC Services',
+    headline:  function(c,s){ return 'SEO for HVAC Companies in '+c+', '+s; },
+    subhead:   function(c){   return 'Rank on Google & Get More HVAC Service Calls in '+c; },
+    intro:     function(c,s){ return 'When the AC breaks in the middle of a '+c+' summer or the furnace fails on a cold winter night, homeowners don\'t ask friends for a recommendation — they search Google. MeniPages builds hundreds of targeted SEO pages for HVAC companies in '+c+' so you show up when customers need you most.'; },
+    services:  function(c,s){ return [
+      { name:'AC Repair SEO',            desc:'Rank for air conditioning repair and emergency AC searches across '+c+'.' },
+      { name:'Furnace Installation SEO', desc:'Capture furnace and heating installation searches from '+c+' homeowners.' },
+      { name:'Heat Pump SEO',            desc:'Show up for heat pump installation and service searches in '+c+'.' },
+      { name:'AC Maintenance SEO',       desc:'Rank for HVAC tune-up and maintenance agreement searches in '+c+'.' },
+      { name:'Emergency HVAC SEO',       desc:'Win urgent searches: "emergency HVAC '+c+'" and "24/7 AC repair."' },
+      { name:'Commercial HVAC SEO',      desc:'Target commercial HVAC and building maintenance searches across '+c+'.' },
+    ]; },
+    whyPoints: function(c){ return [
+      { title:'Seasonal demand means time-sensitive ranking', body:'HVAC searches spike dramatically in summer and winter. Having your pages ranked before peak season means capturing demand when it\'s highest.' },
+      { title:'Emergency searches convert at 90%+',           body:'Someone searching "AC repair '+c+'" in July is calling the first plausible result they find. Ranking is everything.' },
+      { title:'Average HVAC job is $1,500–$8,000',           body:'The ROI on a single new HVAC installation client won from organic search pays for months of SEO service.' },
+    ]; },
+    faq: function(c,s){ return [
+      { q:'How quickly can my HVAC company rank in '+c+'?',                a:'We see rankings start appearing in weeks 4–8 for many HVAC-related searches. Long-tail terms like specific equipment models or neighbourhood-level searches often rank fastest. By month 3, expect meaningful traffic growth.' },
+      { q:'Do you target commercial or residential HVAC in '+c+'?',        a:'Both, depending on your business focus. We build separate page sets for residential and commercial HVAC searches in '+c+' so you capture every relevant customer type.' },
+    ]; },
   },
-  "electrician": {
-    label: "Electricians", plural: "Electrical Contractors",
-    headline: (city, state) => `SEO for Electricians in ${city}, ${state}`,
-    subhead: (city, state) => `Get More Electrical Jobs from Google in ${city}`,
-    intro: (city, state) => `Homeowners and businesses in ${city} search Google when they need an electrician — for panel upgrades, EV charger installation, or electrical emergencies. MeniPages builds a network of targeted SEO pages for electricians in ${city}, ${state} so you show up for every electrical search your ideal customers make.`,
-    services: [
-      { name: "Panel Upgrade SEO", desc: `Rank for electrical panel upgrade and 200-amp service searches in ${city}.` },
-      { name: "EV Charger Installation SEO", desc: `Capture the fast-growing EV charger installation search market in ${city}.` },
-      { name: "Wiring & Rewiring SEO", desc: `Show up for home rewiring and electrical wiring searches across ${city}.` },
-      { name: "Electrical Repair SEO", desc: `Rank for outlet, switch, and general electrical repair searches in ${city}.` },
-      { name: "Commercial Electrical SEO", desc: `Target commercial electrical contractor searches in the ${city} area.` },
-      { name: "Emergency Electrician SEO", desc: `Win urgent searches: "emergency electrician ${city}" and "24/7 electrician."` }
-    ],
-    whyPoints: [
-      { title: "EV adoption is creating new search demand", body: `EV charger installation searches are growing 40%+ YoY. ${city} electricians who rank for these terms now will dominate a rapidly growing market.` },
-      { title: "Electrical work is often urgent", body: "Power outages, tripping breakers, and electrical emergencies drive immediate search-to-call behavior. Ranking converts directly to jobs." },
-      { title: "Permit-required work means repeat customers", body: "Homeowners who find you for a panel upgrade will call you again for future electrical needs — making each client worth far more over time." }
-    ],
-    faq: (city, state) => [
-      { q: `What types of electrical searches should I rank for in ${city}?`, a: `A mix of service pages (panel upgrades, EV chargers, rewiring), emergency searches ("electrician near me ${city}"), and neighborhood-level pages covering every area you serve. We research and target all of them.` },
-      { q: `Can you help a new electrical contractor get established in ${city}?`, a: `Yes. Programmatic SEO is excellent for new contractors because you can build visibility quickly across many search terms, rather than waiting to rank for one or two competitive terms.` }
-    ],
-    nearbyNiches: ["HVAC Companies", "Plumbers", "Roofing Companies"]
+
+  electrician: {
+    label: 'Electricians', plural: 'Electrical Services',
+    headline:  function(c,s){ return 'SEO for Electricians in '+c+', '+s; },
+    subhead:   function(c){   return 'Get More Electrical Jobs from Google in '+c; },
+    intro:     function(c,s){ return 'Homeowners and businesses in '+c+' search Google when they need an electrician — for panel upgrades, EV charger installation, or electrical emergencies. MeniPages builds a network of targeted SEO pages for electricians in '+c+', '+s+' so you show up for every electrical search your ideal customers make.'; },
+    services:  function(c,s){ return [
+      { name:'Panel Upgrade SEO',         desc:'Rank for electrical panel upgrade and 200-amp service searches in '+c+'.' },
+      { name:'EV Charger Install SEO',    desc:'Capture the fast-growing EV charger installation search market in '+c+'.' },
+      { name:'Wiring & Rewiring SEO',     desc:'Show up for home rewiring and electrical wiring searches across '+c+'.' },
+      { name:'Electrical Repair SEO',     desc:'Rank for outlet, switch, and general electrical repair searches in '+c+'.' },
+      { name:'Commercial Electrical SEO', desc:'Target commercial electrical contractor searches in the '+c+' area.' },
+      { name:'Emergency Electrician SEO', desc:'Win urgent searches: "emergency electrician '+c+'" and "24/7 electrician."' },
+    ]; },
+    whyPoints: function(c){ return [
+      { title:'EV adoption is creating new search demand',   body:'EV charger installation searches are growing 40%+ YoY. '+c+' electricians who rank for these terms now will dominate a rapidly growing market.' },
+      { title:'Electrical work is often urgent',             body:'Power outages and tripping breakers drive immediate search-to-call behaviour. Ranking converts directly to jobs.' },
+      { title:'Permit-required work means repeat customers', body:'Homeowners who find you for a panel upgrade will call you again for future electrical needs — making each client worth far more over time.' },
+    ]; },
+    faq: function(c,s){ return [
+      { q:'What types of electrical searches should I rank for in '+c+'?',     a:'A mix of service pages (panel upgrades, EV chargers, rewiring), emergency searches ("electrician near me '+c+'"), and neighbourhood-level pages covering every area you serve. We research and target all of them.' },
+      { q:'Can you help a new electrical contractor get established in '+c+'?', a:'Yes. Programmatic SEO is excellent for new contractors because you can build visibility quickly across many search terms, rather than waiting to rank for one or two competitive terms.' },
+    ]; },
   },
-  "real-estate-agent": {
-    label: "Real Estate Agents", plural: "Real Estate",
-    headline: (city, state) => `SEO for Real Estate Agents in ${city}, ${state}`,
-    subhead: (city, state) => `Attract Buyers & Sellers from Google in ${city}`,
-    intro: (city, state) => `Every homebuyer and seller in ${city} starts their journey on Google. They search for agents, neighborhoods, market trends, and listings. MeniPages builds targeted SEO pages for real estate agents and brokerages in ${city}, ${state} so you're the agent they find — and call.`,
-    services: [
-      { name: "Home Buyer SEO", desc: `Rank for home buyer agent and first-time buyer searches in ${city}.` },
-      { name: "Home Seller SEO", desc: `Capture "sell my house ${city}" and listing agent searches.` },
-      { name: "Neighborhood SEO", desc: `Build dedicated pages for every ${city} neighborhood to capture location-specific searches.` },
-      { name: "Luxury Real Estate SEO", desc: `Rank for luxury homes, high-end listings, and premium buyer searches in ${city}.` },
-      { name: "Investment Property SEO", desc: `Target real estate investor and rental property searches in ${city}.` },
-      { name: "New Construction SEO", desc: `Show up for new build and new construction home searches in ${city}.` }
-    ],
-    whyPoints: [
-      { title: "73% of buyers search online before contacting an agent", body: `In ${city}'s competitive market, being found on Google is the difference between a client choosing you or a competitor.` },
-      { title: "Neighborhood pages drive hyper-relevant traffic", body: `Buyers searching "${city} neighborhoods for families" or "homes in [${city} area]" convert at extremely high rates — they're already mentally committed to an area.` },
-      { title: "Listings come and go; your Google presence doesn't", body: "Unlike Zillow and Realtor.com, the SEO pages we build for you are permanent assets that drive traffic regardless of your current listings." }
-    ],
-    faq: (city, state) => [
-      { q: `How is real estate SEO different in ${city}?`, a: `${city} has specific neighborhoods, school districts, and market dynamics that buyers and sellers search for by name. We build pages targeting every meaningful local search — from broad terms like "buy a home ${city}" to specific neighborhood and school district pages.` },
-      { q: `Can I compete with Zillow and Realtor.com on Google?`, a: `For broad terms, it's tough. But for local, specific searches — "best neighborhoods for families in ${city}" or "${city} luxury homes" — a well-optimized local agent site can absolutely rank above aggregators.` }
-    ],
-    nearbyNiches: ["Accountants", "Law Firms", "Chiropractors"]
+
+  'real-estate-agent': {
+    label: 'Real Estate Agents', plural: 'Real Estate',
+    headline:  function(c,s){ return 'SEO for Real Estate Agents in '+c+', '+s; },
+    subhead:   function(c){   return 'Attract Buyers & Sellers from Google in '+c; },
+    intro:     function(c,s){ return 'Every homebuyer and seller in '+c+' starts their journey on Google. They search for agents, neighbourhoods, market trends, and listings. MeniPages builds targeted SEO pages for real estate agents and brokerages in '+c+', '+s+' so you\'re the agent they find — and call.'; },
+    services:  function(c,s){ return [
+      { name:'Home Buyer SEO',          desc:'Rank for home buyer agent and first-time buyer searches in '+c+'.' },
+      { name:'Home Seller SEO',         desc:'Capture "sell my house '+c+'" and listing agent searches.' },
+      { name:'Neighbourhood SEO',       desc:'Build dedicated pages for every '+c+' neighbourhood to capture location-specific searches.' },
+      { name:'Luxury Real Estate SEO',  desc:'Rank for luxury homes, high-end listings, and premium buyer searches in '+c+'.' },
+      { name:'Investment Property SEO', desc:'Target real estate investor and rental property searches in '+c+'.' },
+      { name:'New Construction SEO',    desc:'Show up for new build and new construction home searches in '+c+'.' },
+    ]; },
+    whyPoints: function(c){ return [
+      { title:'73% of buyers search online before contacting an agent', body:'In '+c+'\'s competitive market, being found on Google is the difference between a client choosing you or a competitor.' },
+      { title:'Neighbourhood pages drive hyper-relevant traffic',       body:'Buyers searching "'+c+' neighbourhoods for families" convert at extremely high rates — they\'re already mentally committed to an area.' },
+      { title:'Listings come and go; your Google presence doesn\'t',   body:'Unlike Zillow and Realtor.com, the SEO pages we build for you are permanent assets that drive traffic regardless of your current listings.' },
+    ]; },
+    faq: function(c,s){ return [
+      { q:'How is real estate SEO different in '+c+'?',          a:c+' has specific neighbourhoods, school districts, and market dynamics that buyers and sellers search for by name. We build pages targeting every meaningful local search — from broad terms like "buy a home '+c+'" to specific neighbourhood and school district pages.' },
+      { q:'Can I compete with Zillow and Realtor.com on Google?', a:'For broad terms, it\'s tough. But for local, specific searches — "best neighbourhoods for families in '+c+'" or "'+c+' luxury homes" — a well-optimised local agent site can absolutely rank above aggregators.' },
+    ]; },
   },
-  "chiropractor": {
-    label: "Chiropractors", plural: "Chiropractic Practices",
-    headline: (city, state) => `SEO for Chiropractors in ${city}, ${state}`,
-    subhead: (city, state) => `Get More Chiropractic Patients from Google in ${city}`,
-    intro: (city, state) => `Patients in ${city} suffering from back pain, neck pain, or sports injuries turn to Google to find relief. MeniPages builds targeted SEO pages for chiropractic practices in ${city}, ${state} so you're the chiropractor they find and choose — consistently bringing new patients through your doors.`,
-    services: [
-      { name: "Back Pain Relief SEO", desc: `Rank for back pain and spinal adjustment searches across ${city}.` },
-      { name: "Neck Pain SEO", desc: `Capture neck pain and whiplash treatment searches in ${city}.` },
-      { name: "Sports Injury SEO", desc: `Show up for sports injury and athletic recovery searches in ${city}.` },
-      { name: "Auto Accident Injury SEO", desc: `Rank for car accident chiropractic and personal injury referral searches.` },
-      { name: "Headache & Migraine SEO", desc: `Target headache treatment and migraine relief searches in ${city}.` },
-      { name: "Pediatric Chiropractic SEO", desc: `Rank for children's chiropractic and prenatal care searches in ${city}.` }
-    ],
-    whyPoints: [
-      { title: "Pain patients search immediately and urgently", body: "Someone with acute back pain searches Google immediately. Ranking for 'chiropractor near me ${city}' captures patients at peak need." },
-      { title: "Long-term patients have high lifetime value", body: "Regular chiropractic care creates recurring revenue. A new patient found through SEO might visit for years." },
-      { title: "Auto accident referrals are high-value", body: "Ranking for car accident injury searches connects you with personal injury attorneys and generates a steady stream of referred patients." }
-    ],
-    faq: (city, state) => [
-      { q: `What chiropractic searches have the most volume in ${city}?`, a: `"Chiropractor near me," "back pain relief ${city}," and "chiropractor ${city}" are the highest volume. But long-tail searches like "chiropractor for sports injuries ${city}" and neighborhood-specific searches convert at much higher rates. We target all of them.` },
-      { q: `How do you differentiate my chiropractic pages in ${city}?`, a: `Each page targets a specific treatment or condition — back pain, neck pain, sports injuries, headaches — combined with ${city} location targeting. This specificity is what gets you ranked and what resonates with patients searching for help with a specific problem.` }
-    ],
-    nearbyNiches: ["Gyms & Fitness", "Dentists", "Lawyers"]
+
+  chiropractor: {
+    label: 'Chiropractors', plural: 'Chiropractic Practices',
+    headline:  function(c,s){ return 'SEO for Chiropractors in '+c+', '+s; },
+    subhead:   function(c){   return 'Get More Chiropractic Patients from Google in '+c; },
+    intro:     function(c,s){ return 'Patients in '+c+' suffering from back pain, neck pain, or sports injuries turn to Google to find relief. MeniPages builds targeted SEO pages for chiropractic practices in '+c+', '+s+' so you\'re the chiropractor they find and choose — consistently bringing new patients through your doors.'; },
+    services:  function(c,s){ return [
+      { name:'Back Pain Relief SEO',       desc:'Rank for back pain and spinal adjustment searches across '+c+'.' },
+      { name:'Neck Pain SEO',              desc:'Capture neck pain and whiplash treatment searches in '+c+'.' },
+      { name:'Sports Injury SEO',          desc:'Show up for sports injury and athletic recovery searches in '+c+'.' },
+      { name:'Auto Accident Injury SEO',   desc:'Rank for car accident chiropractic and personal injury referral searches in '+c+'.' },
+      { name:'Headache & Migraine SEO',    desc:'Target headache treatment and migraine relief searches in '+c+'.' },
+      { name:'Pediatric Chiropractic SEO', desc:'Rank for children\'s chiropractic and prenatal care searches in '+c+'.' },
+    ]; },
+    whyPoints: function(c){ return [
+      { title:'Pain patients search immediately and urgently', body:'Someone with acute back pain searches Google immediately. Ranking for "chiropractor near me '+c+'" captures patients at peak need.' },
+      { title:'Long-term patients have high lifetime value',   body:'Regular chiropractic care creates recurring revenue. A new patient found through SEO might visit for years.' },
+      { title:'Auto accident referrals are high-value',        body:'Ranking for car accident injury searches connects you with personal injury attorneys and generates a steady stream of referred patients in '+c+'.' },
+    ]; },
+    faq: function(c,s){ return [
+      { q:'What chiropractic searches have the most volume in '+c+'?', a:'"Chiropractor near me," "back pain relief '+c+'," and "chiropractor '+c+'" are the highest volume. But long-tail searches like "chiropractor for sports injuries '+c+'" and neighbourhood-specific searches convert at much higher rates. We target all of them.' },
+      { q:'How do you differentiate my chiropractic pages in '+c+'?',  a:'Each page targets a specific treatment or condition — back pain, neck pain, sports injuries, headaches — combined with '+c+' location targeting. This specificity is what gets you ranked and resonates with patients searching for help with a specific problem.' },
+    ]; },
   },
-  "roofing": {
-    label: "Roofing Companies", plural: "Roofing Services",
-    headline: (city, state) => `SEO for Roofing Companies in ${city}, ${state}`,
-    subhead: (city, state) => `Win More Roofing Jobs from Google in ${city}`,
-    intro: (city, state) => `Homeowners in ${city} search Google the moment they notice a roof problem — after a storm, when they spot a leak, or when they're planning a renovation. MeniPages builds targeted SEO pages for roofing contractors in ${city}, ${state} so you show up first and win the job.`,
-    services: [
-      { name: "Roof Repair SEO", desc: `Rank for roof leak, storm damage, and repair searches in ${city}.` },
-      { name: "Roof Replacement SEO", desc: `Capture high-value roof replacement and full reroof searches in ${city}.` },
-      { name: "Storm Damage SEO", desc: `Rank immediately after storms for insurance claim and damage assessment searches.` },
-      { name: "New Installation SEO", desc: `Target new construction and new roof installation searches in ${city}.` },
-      { name: "Flat Roof SEO", desc: `Show up for commercial flat roof and EPDM searches in ${city}.` },
-      { name: "Gutter Services SEO", desc: `Rank for gutter installation, cleaning, and guard searches across ${city}.` }
-    ],
-    whyPoints: [
-      { title: "Storm events drive massive search spikes", body: `After a hail storm or major weather event in ${city}, roofing searches spike by 500%+. Having rankings in place before storms means capturing this surge.` },
-      { title: "Average roofing job is $8,000-$25,000", body: "The ROI on a single roofing lead from organic search is exceptional. One new customer per month from SEO pays for the entire service many times over." },
-      { title: "Insurance claims create referral chains", body: "Roofing customers who have a great experience refer neighbors. One organic lead can generate 2-3 additional jobs through referrals." }
-    ],
-    faq: (city, state) => [
-      { q: `How do you target storm damage searches in ${city}?`, a: `We build dedicated pages for storm damage, hail damage, and insurance claim assistance. These pages are always live and indexed — so when ${city} has a weather event, you're already ranking rather than trying to react.` },
-      { q: `Can roofing SEO in ${city} compete with the big national companies?`, a: `Yes — local trust matters enormously in roofing. Homeowners in ${city} prefer a local contractor they can verify. A well-optimized local roofing site consistently outranks national directories for ${city}-specific searches.` }
-    ],
-    nearbyNiches: ["HVAC Companies", "Electricians", "Plumbers"]
+
+  roofing: {
+    label: 'Roofing Companies', plural: 'Roofing Services',
+    headline:  function(c,s){ return 'SEO for Roofing Companies in '+c+', '+s; },
+    subhead:   function(c){   return 'Win More Roofing Jobs from Google in '+c; },
+    intro:     function(c,s){ return 'Homeowners in '+c+' search Google the moment they notice a roof problem — after a storm, when they spot a leak, or when they\'re planning a renovation. MeniPages builds targeted SEO pages for roofing contractors in '+c+', '+s+' so you show up first and win the job.'; },
+    services:  function(c,s){ return [
+      { name:'Roof Repair SEO',       desc:'Rank for roof leak, storm damage, and repair searches in '+c+'.' },
+      { name:'Roof Replacement SEO',  desc:'Capture high-value roof replacement and full reroof searches in '+c+'.' },
+      { name:'Storm Damage SEO',      desc:'Rank immediately after storms for insurance claim and damage assessment searches in '+c+'.' },
+      { name:'New Installation SEO',  desc:'Target new construction and new roof installation searches in '+c+'.' },
+      { name:'Flat Roof SEO',         desc:'Show up for commercial flat roof and EPDM searches in '+c+'.' },
+      { name:'Gutter Services SEO',   desc:'Rank for gutter installation, cleaning, and guard searches across '+c+'.' },
+    ]; },
+    whyPoints: function(c){ return [
+      { title:'Storm events drive massive search spikes in '+c, body:'After a hail storm or major weather event in '+c+', roofing searches spike by 500%+. Having rankings in place before storms means capturing this surge.' },
+      { title:'Average roofing job is $8,000–$25,000',          body:'The ROI on a single roofing lead from organic search is exceptional. One new customer per month from SEO pays for the entire service many times over.' },
+      { title:'Insurance claims create referral chains',         body:'Roofing customers who have a great experience refer neighbours. One organic lead can generate 2–3 additional jobs through referrals.' },
+    ]; },
+    faq: function(c,s){ return [
+      { q:'How do you target storm damage searches in '+c+'?',                 a:'We build dedicated pages for storm damage, hail damage, and insurance claim assistance. These pages are always live and indexed — so when '+c+' has a weather event, you\'re already ranking rather than trying to react.' },
+      { q:'Can roofing SEO in '+c+' compete with big national companies?',     a:'Yes — local trust matters enormously in roofing. Homeowners in '+c+' prefer a local contractor they can verify. A well-optimised local roofing site consistently outranks national directories for '+c+'-specific searches.' },
+    ]; },
   },
-  "gym": {
-    label: "Gyms & Fitness", plural: "Gyms & Fitness Studios",
-    headline: (city, state) => `SEO for Gyms & Fitness Studios in ${city}, ${state}`,
-    subhead: (city, state) => `Attract New Members from Google in ${city}`,
-    intro: (city, state) => `Every gym and fitness studio in ${city} is fighting for the same potential members — people searching "gym near me," "CrossFit ${city}," or "personal trainer ${city}." MeniPages builds targeted SEO pages for fitness businesses in ${city}, ${state} so you show up first and convert searchers into paying members.`,
-    services: [
-      { name: "Gym & Fitness SEO", desc: `Rank for "gym near me" and general fitness center searches in ${city}.` },
-      { name: "Personal Training SEO", desc: `Capture high-intent personal trainer searches from ${city} residents.` },
-      { name: "CrossFit SEO", desc: `Rank for CrossFit box and functional fitness searches in ${city}.` },
-      { name: "Yoga Studio SEO", desc: `Show up for yoga classes, hot yoga, and Pilates searches in ${city}.` },
-      { name: "Group Fitness SEO", desc: `Target HIIT, bootcamp, and group class searches across ${city}.` },
-      { name: "Nutrition Coaching SEO", desc: `Rank for nutrition and weight loss coaching searches in ${city}.` }
-    ],
-    whyPoints: [
-      { title: "January & September are peak search months", body: `New Year and back-to-school periods generate massive gym search spikes. Ranking before these periods captures members at peak motivation.` },
-      { title: "Location is everything for gym searches", body: `People won't travel more than 15 minutes to a gym. Neighborhood-level pages targeting specific ${city} areas connect you with the most likely-to-join searchers.` },
-      { title: "Members have strong lifetime value", body: "The average gym member generates $500-$2,000+ per year. One new member per month from SEO pays for the entire service." }
-    ],
-    faq: (city, state) => [
-      { q: `What gym searches are most valuable in ${city}?`, a: `"Gym near me" has the highest volume but is competitive. Neighborhood-specific searches ("gym in [${city} area]"), class-type searches ("yoga classes ${city}"), and trainer searches have lower competition but high conversion. We target all of them.` },
-      { q: `How do I stand out from big gyms like Planet Fitness in ${city}?`, a: `Big chains compete on price. You compete on specialty, community, and local expertise. Our pages highlight what makes your gym unique while targeting searches from ${city} residents most likely to value what you offer.` }
-    ],
-    nearbyNiches: ["Chiropractors", "Dentists", "HVAC Companies"]
-  }
+
+  gym: {
+    label: 'Gyms & Fitness', plural: 'Gyms & Fitness Studios',
+    headline:  function(c,s){ return 'SEO for Gyms & Fitness Studios in '+c+', '+s; },
+    subhead:   function(c){   return 'Attract New Members from Google in '+c; },
+    intro:     function(c,s){ return 'Every gym and fitness studio in '+c+' is fighting for the same potential members — people searching "gym near me," "CrossFit '+c+'," or "personal trainer '+c+'." MeniPages builds targeted SEO pages for fitness businesses in '+c+', '+s+' so you show up first and convert searchers into paying members.'; },
+    services:  function(c,s){ return [
+      { name:'Gym & Fitness SEO',      desc:'Rank for "gym near me" and general fitness centre searches in '+c+'.' },
+      { name:'Personal Training SEO',  desc:'Capture high-intent personal trainer searches from '+c+' residents.' },
+      { name:'CrossFit SEO',           desc:'Rank for CrossFit box and functional fitness searches in '+c+'.' },
+      { name:'Yoga Studio SEO',        desc:'Show up for yoga classes, hot yoga, and Pilates searches in '+c+'.' },
+      { name:'Group Fitness SEO',      desc:'Target HIIT, bootcamp, and group class searches across '+c+'.' },
+      { name:'Nutrition Coaching SEO', desc:'Rank for nutrition and weight loss coaching searches in '+c+'.' },
+    ]; },
+    whyPoints: function(c){ return [
+      { title:'January & September are peak search months',    body:'New Year and back-to-school periods generate massive gym search spikes in '+c+'. Ranking before these periods captures members at peak motivation.' },
+      { title:'Location is everything for '+c+' gym searches', body:'People won\'t travel more than 15 minutes to a gym. Neighbourhood-level pages targeting specific '+c+' areas connect you with the most likely-to-join searchers.' },
+      { title:'Members have strong lifetime value',             body:'The average gym member generates $500–$2,000+ per year. One new member per month from SEO pays for the entire service.' },
+    ]; },
+    faq: function(c,s){ return [
+      { q:'What gym searches are most valuable in '+c+'?',                 a:'"Gym near me" has the highest volume but is competitive. Neighbourhood-specific searches ("gym in ['+c+' area]"), class-type searches ("yoga classes '+c+'"), and trainer searches have lower competition but high conversion. We target all of them.' },
+      { q:'How do I stand out from big gyms like Planet Fitness in '+c+'?', a:'Big chains compete on price. You compete on specialty, community, and local expertise. Our pages highlight what makes your gym unique while targeting searches from '+c+' residents most likely to value what you offer.' },
+    ]; },
+  },
 };
 
-// ── READ URL PARAMS ──
-const params = new URLSearchParams(window.location.search);
-const nicheSlug = params.get('niche') || 'plumber';
-const city = params.get('city') || 'Houston';
-const state = params.get('state') || 'TX';
+// ─────────────────────────────────────────────────────────
+//  STEP 3: Resolve niche, call all functions with live params
+// ─────────────────────────────────────────────────────────
+var niche = NICHES[nicheSlug] || NICHES['plumber'];
 
-const niche = NICHES[nicheSlug] || NICHES['plumber'];
-
-// ── SET META ──
-const pageTitle = `${niche.headline(city, state)} | MeniPages`;
-const pageDesc = niche.intro(city, state).slice(0, 160) + '…';
-const canonURL = `https://www.menipages.com/seo-for-${nicheSlug}-in-${city.toLowerCase().replace(/\s/g,'-')}-${state.toLowerCase()}`;
+var pageTitle = niche.headline(city, state) + ' | MeniPages';
+var pageDesc  = niche.intro(city, state).slice(0, 158) + '…';
+var canonURL  = 'https://www.menipages.com/seo-for-' + nicheSlug + '-in-' + city.toLowerCase().replace(/\s+/g,'-') + '-' + state.toLowerCase();
 
 document.title = pageTitle;
 document.getElementById('page-title').textContent = pageTitle;
@@ -491,223 +475,104 @@ document.getElementById('og-desc').setAttribute('content', pageDesc);
 document.getElementById('tw-title').setAttribute('content', pageTitle);
 document.getElementById('tw-desc').setAttribute('content', pageDesc);
 
-// Inject schemas
+// Schema
 function injectSchema(obj) {
-  const s = document.createElement('script');
+  var s = document.createElement('script');
   s.type = 'application/ld+json';
   s.textContent = JSON.stringify(obj);
   document.head.appendChild(s);
 }
+injectSchema({ "@context":"https://schema.org","@type":"Service","name":niche.label+" SEO in "+city+", "+state,"provider":{"@type":"Organization","name":"MeniPages","url":"https://www.menipages.com"},"serviceType":"Search Engine Optimisation","areaServed":{"@type":"City","name":city,"addressRegion":state,"addressCountry":"US"},"description":pageDesc });
+injectSchema({ "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.menipages.com/"},{"@type":"ListItem","position":2,"name":"SEO Services","item":"https://www.menipages.com/seo-services"},{"@type":"ListItem","position":3,"name":niche.label+" SEO in "+city,"item":canonURL}] });
+injectSchema({ "@context":"https://schema.org","@type":"FAQPage","mainEntity":niche.faq(city,state).map(function(f){ return {"@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a}}; }) });
 
-injectSchema({
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": `${niche.label} SEO Service in ${city}, ${state}`,
-  "provider": { "@type": "Organization", "name": "MeniPages", "url": "https://www.menipages.com" },
-  "serviceType": "Search Engine Optimization",
-  "areaServed": { "@type": "City", "name": city, "addressRegion": state, "addressCountry": "US" },
-  "description": pageDesc,
-  "offers": [
-    { "@type": "Offer", "name": "Starter Plan", "price": "497.00", "priceCurrency": "USD" },
-    { "@type": "Offer", "name": "Growth Plan", "price": "997.00", "priceCurrency": "USD" },
-    { "@type": "Offer", "name": "Authority Plan", "price": "1997.00", "priceCurrency": "USD" }
-  ]
-});
+// ─────────────────────────────────────────────────────────
+//  STEP 4: Build HTML from function results
+// ─────────────────────────────────────────────────────────
+var services   = niche.services(city, state);
+var whyPoints  = niche.whyPoints(city);
+var faqs       = niche.faq(city, state);
 
-injectSchema({
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.menipages.com/" },
-    { "@type": "ListItem", "position": 2, "name": "SEO Services", "item": "https://www.menipages.com/seo-services" },
-    { "@type": "ListItem", "position": 3, "name": `${niche.label} SEO`, "item": canonURL }
-  ]
-});
+var allCities = [['Houston','TX'],['Phoenix','AZ'],['Chicago','IL'],['Dallas','TX'],['Denver','CO'],['Atlanta','GA'],['Miami','FL'],['Seattle','WA'],['Austin','TX'],['Nashville','TN'],['Charlotte','NC'],['Las Vegas','NV'],['San Diego','CA'],['Portland','OR'],['Minneapolis','MN'],['Tampa','FL'],['Boston','MA'],['Raleigh','NC'],['Kansas City','MO'],['Salt Lake City','UT']];
+var nearbyCities = allCities.filter(function(a){ return a[0] !== city; }).slice(0, 8);
 
-injectSchema({
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": niche.faq(city, state).map(f => ({
-    "@type": "Question", "name": f.q,
-    "acceptedAnswer": { "@type": "Answer", "text": f.a }
-  }))
-});
+var serviceCardsHTML = services.map(function(s, i){
+  return '<div class="service-card"><p class="service-num">0'+(i+1)+'</p><h3>'+s.name+'</h3><p>'+s.desc+'</p></div>';
+}).join('');
 
-// ── RENDER PAGE ──
-const allCities = ["Houston, TX","Phoenix, AZ","Chicago, IL","Dallas, TX","Denver, CO","Atlanta, GA","Miami, FL","Seattle, WA","Austin, TX","Nashville, TN","Charlotte, NC","Las Vegas, NV","San Diego, CA","Portland, OR","Minneapolis, MN","Tampa, FL","Boston, MA","Raleigh, NC","Kansas City, MO","Salt Lake City, UT"];
-const nearbyCities = allCities.filter(c => c !== `${city}, ${state}`).slice(0,8);
+var whyItemsHTML = whyPoints.map(function(w){
+  return '<li class="why-item"><div class="why-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><strong>'+w.title+'</strong><p>'+w.body+'</p></div></li>';
+}).join('');
 
-document.getElementById('page-content').innerHTML = `
-  <!-- BREADCRUMB -->
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="index.html">Home</a>
-    <span class="breadcrumb-sep">›</span>
-    <a href="pseo-hub.html">SEO Services</a>
-    <span class="breadcrumb-sep">›</span>
-    <span aria-current="page">${niche.label} in ${city}, ${state}</span>
-  </nav>
+var ppRowsHTML = services.slice(0, 5).map(function(s, i){
+  var slug = s.name.toLowerCase().replace(/ seo$/i,'').replace(/\s+/g,'-').replace(/[&]/g,'and');
+  var rankClass = i < 3 ? 'top' : 'mid';
+  var rankLabel = i < 3 ? 'Rank #'+(i+2) : 'Indexing';
+  var arrowUp   = '<polyline points="22 7 13.5 15.5 8.5 10.5 1 6"/>';
+  var arrowDown = '<polyline points="1 17 6 12 10 16 17 9 23 13"/>';
+  return '<div class="pp-row"><span class="pp-page">'+nicheSlug+'-'+slug+'-'+city.toLowerCase().replace(/\s+/g,'-')+'</span><span class="pp-rank '+rankClass+'"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">'+(i<3?arrowUp:arrowDown)+'</svg>'+rankLabel+'</span></div>';
+}).join('');
 
-  <!-- HERO -->
-  <section class="page-hero" itemscope itemtype="https://schema.org/Service">
-    <div>
-      <div class="hero-eyebrow">Done-For-You · ${city}, ${state}</div>
-      <h1 class="page-h1" itemprop="name">${niche.subhead(city, state).replace(city, `<em>${city}</em>`)}</h1>
-      <p class="page-intro" itemprop="description">${niche.intro(city, state)}</p>
-      <div class="hero-actions">
-        <a href="index.html#pricing" class="btn-primary">See Plans &amp; Pricing →</a>
-        <a href="pseo-hub.html" class="btn-ghost">← All Niches &amp; Cities</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><strong>200+</strong><span>Pages Built</span></div>
-        <div class="stat"><strong>3 wks</strong><span>To Launch</span></div>
-        <div class="stat"><strong>$0</strong><span>Per Click</span></div>
-      </div>
-    </div>
+var faqHTML = faqs.map(function(f){
+  return '<div class="faq-item"><button class="faq-q" aria-expanded="false">'+f.q+'<span class="faq-chevron" aria-hidden="true">+</span></button><div class="faq-a">'+f.a+'</div></div>';
+}).join('');
 
-    <div class="hero-preview" aria-label="Sample SEO page preview">
-      <div class="preview-badge">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-        Example Page We'd Build
-      </div>
-      <p class="preview-url">menipages.com/${nicheSlug}-${city.toLowerCase().replace(/\s/g,'-')}</p>
-      <p class="preview-title">${niche.label} in ${city}, ${state} — ${niche.services[0].name.replace(' SEO','')}</p>
-      <p class="preview-desc">Trusted ${niche.label.toLowerCase()} in ${city} serving residential and commercial clients. Fast response, licensed and insured, 5-star rated.</p>
-      <div class="preview-tags">
-        ${niche.services.slice(0,3).map(s => `<span class="preview-tag">${s.name.replace(' SEO','')}</span>`).join('')}
-        <span class="preview-tag">${city}, ${state}</span>
-      </div>
-      <div class="seo-scores">
-        <div class="score-item"><p class="score-label">SEO Score</p><p class="score-val">96</p></div>
-        <div class="score-item"><p class="score-label">Indexed in</p><p class="score-val">14d</p></div>
-        <div class="score-item"><p class="score-label">Keywords</p><p class="score-val">47</p></div>
-      </div>
-    </div>
-  </section>
+var nearbyHTML = nearbyCities.map(function(n){
+  return '<a href="pseo-page.html?niche='+encodeURIComponent(nicheSlug)+'&city='+encodeURIComponent(n[0])+'&state='+encodeURIComponent(n[1])+'" class="nearby-link">'+niche.label+' SEO \u2014 '+n[0]+'<span>'+n[1]+'</span></a>';
+}).join('');
 
-  <!-- SERVICES -->
-  <section class="services-section" aria-labelledby="services-heading">
-    <p class="section-label">What We Build</p>
-    <h2 class="section-title" id="services-heading">SEO Pages for Every<br><em>${niche.plural}</em> Search</h2>
-    <p class="section-desc">We don't just optimize your homepage. We build a dedicated, Google-indexed page for every service your ${city} ${niche.label.toLowerCase()} business offers — so you show up no matter what your customer searches.</p>
-    <div class="services-grid">
-      ${niche.services.map((s,i) => `
-        <div class="service-card">
-          <p class="service-num">0${i+1}</p>
-          <h3>${s.name}</h3>
-          <p>${s.desc}</p>
-        </div>`).join('')}
-    </div>
-  </section>
+var previewTags = services.slice(0,3).map(function(s){
+  return '<span class="preview-tag">'+s.name.replace(/ SEO$/i,'')+'</span>';
+}).join('') + '<span class="preview-tag">'+city+', '+state+'</span>';
 
-  <!-- WHY RANK -->
-  <section class="why-section" aria-labelledby="why-heading">
-    <div class="why-grid">
-      <div>
-        <p class="section-label">Why It Matters</p>
-        <h2 class="section-title" id="why-heading">Why ${city}<br><em>${niche.label}</em><br>Need SEO Now</h2>
-        <p class="section-desc">The businesses that invest in SEO today are the ones that are impossible to compete with in 2 years. Here's why ${city} ${niche.label.toLowerCase()} can't afford to wait.</p>
-        <ul class="why-list" aria-label="Reasons to invest in SEO">
-          ${niche.whyPoints.map(w => `
-            <li class="why-item">
-              <div class="why-icon" aria-hidden="true">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </div>
-              <div>
-                <strong>${w.title.replace(city, `<em style="color:var(--lime);font-style:normal">${city}</em>`)}</strong>
-                <p>${w.body.replace(city, `<strong>${city}</strong>`)}</p>
-              </div>
-            </li>`).join('')}
-        </ul>
-      </div>
-      <div class="pages-preview" aria-label="Sample pages we would build">
-        <div class="pp-header">
-          <div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div>
-          <span class="pp-url">yoursite.com/</span>
-        </div>
-        ${niche.services.slice(0,5).map((s,i) => `
-          <div class="pp-row">
-            <span class="pp-page">${nicheSlug}-${s.name.toLowerCase().replace(' seo','').replace(/\s/g,'-')}-${city.toLowerCase().replace(/\s/g,'-')}</span>
-            <span class="pp-rank ${i < 3 ? 'top' : 'mid'}">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="${i < 3 ? '22 7 13.5 15.5 8.5 10.5 1 6' : '1 17 6 12 10 16 17 9 23 13'}"/></svg>
-              ${i < 3 ? `Rank #${i+2}` : 'Indexing'}
-            </span>
-          </div>`).join('')}
-      </div>
-    </div>
-  </section>
+// ─────────────────────────────────────────────────────────
+//  STEP 5: Inject into DOM
+// ─────────────────────────────────────────────────────────
+document.getElementById('page-content').innerHTML =
+'<nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">›</span><a href="pseo-hub.html">SEO Services</a><span class="breadcrumb-sep">›</span><span aria-current="page">'+niche.label+' in '+city+', '+state+'</span></nav>' +
 
-  <!-- FAQ -->
-  <section class="faq-section" aria-labelledby="faq-heading">
-    <p class="section-label">FAQ</p>
-    <h2 class="section-title" id="faq-heading">Questions About<br><em>${niche.label} SEO</em></h2>
-    <div class="faq-wrap">
-      ${niche.faq(city, state).map(f => `
-        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <button class="faq-q" aria-expanded="false">${f.q}<span class="faq-chevron" aria-hidden="true">+</span></button>
-          <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">${f.a}</span></div>
-        </div>`).join('')}
-    </div>
-  </section>
+'<section class="page-hero">' +
+'<div>' +
+'<div class="hero-eyebrow">Done-For-You · '+city+', '+state+'</div>' +
+'<h1 class="page-h1">'+niche.subhead(city)+'</h1>' +
+'<p class="page-intro">'+niche.intro(city,state)+'</p>' +
+'<div class="hero-actions"><a href="index.html#pricing" class="btn-primary">See Plans &amp; Pricing →</a><a href="pseo-hub.html" class="btn-ghost">← All Niches &amp; Cities</a></div>' +
+'<div class="hero-stats"><div class="stat"><strong>200+</strong><span>Pages Built</span></div><div class="stat"><strong>3 wks</strong><span>To Launch</span></div><div class="stat"><strong>$0</strong><span>Per Click</span></div></div>' +
+'</div>' +
+'<div class="hero-preview">' +
+'<div class="preview-badge"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Example Page We\'d Build</div>' +
+'<p class="preview-url">menipages.com/'+nicheSlug+'-'+city.toLowerCase().replace(/\s+/g,'-')+'</p>' +
+'<p class="preview-title">'+niche.label+' in '+city+', '+state+' — '+services[0].name.replace(/ SEO$/i,'')+'</p>' +
+'<p class="preview-desc">Trusted '+niche.label.toLowerCase()+' in '+city+' serving residential and commercial clients. Fast response, licensed and insured, 5-star rated.</p>' +
+'<div class="preview-tags">'+previewTags+'</div>' +
+'<div class="seo-scores"><div class="score-item"><p class="score-label">SEO Score</p><p class="score-val">96</p></div><div class="score-item"><p class="score-label">Indexed in</p><p class="score-val">14d</p></div><div class="score-item"><p class="score-label">Keywords</p><p class="score-val">47</p></div></div>' +
+'</div></section>' +
 
-  <!-- LOCAL CTA -->
-  <section class="local-cta" aria-labelledby="cta-heading">
-    <div class="cta-text">
-      <h2 id="cta-heading">Ready to Own<br><em>${city}'s</em> ${niche.label}<br>Search Results?</h2>
-      <p>We'll research every keyword your ${city} customers search, build hundreds of targeted pages, and have you ranking within weeks — all done for you.</p>
-      <a href="index.html#pricing" class="btn-primary">Get Started Today →</a>
-    </div>
-    <div class="cta-cards">
-      <div class="cta-card">
-        <div><p class="cta-card-title">Starter</p><p class="cta-card-sub">100 pages · 1 niche</p></div>
-        <div class="plan-price">$497</div>
-      </div>
-      <div class="cta-card" style="border-color:rgba(200,240,74,0.2)">
-        <div><p class="cta-card-title">Growth ⭐</p><p class="cta-card-sub">500 pages · 3 niches</p></div>
-        <div class="plan-price">$997</div>
-      </div>
-      <div class="cta-card">
-        <div><p class="cta-card-title">Authority</p><p class="cta-card-sub">2,000+ pages · unlimited</p></div>
-        <div class="plan-price">$1,997</div>
-      </div>
-    </div>
-  </section>
+'<section class="services-section"><p class="section-label">What We Build</p><h2 class="section-title">SEO Pages for Every<br><em>'+niche.plural+'</em> Search</h2><p class="section-desc">We don\'t just optimise your homepage. We build a dedicated, Google-indexed page for every service your '+city+' '+niche.label.toLowerCase()+' business offers — so you show up no matter what your customer searches.</p><div class="services-grid">'+serviceCardsHTML+'</div></section>' +
 
-  <!-- NEARBY -->
-  <section class="nearby-section" aria-labelledby="nearby-heading">
-    <h2 class="nearby-title" id="nearby-heading">${niche.label} SEO in Nearby Cities</h2>
-    <div class="nearby-grid">
-      ${nearbyCities.map(c => {
-        const [nc, ns] = c.split(', ');
-        return `<a href="pseo-page.html?niche=${nicheSlug}&city=${encodeURIComponent(nc)}&state=${ns}" class="nearby-link">
-          ${niche.label} SEO — ${nc}
-          <span>${ns}</span>
-        </a>`;
-      }).join('')}
-    </div>
-  </section>
+'<section class="why-section"><div class="why-grid"><div><p class="section-label">Why It Matters</p><h2 class="section-title">Why '+city+'<br><em>'+niche.label+'</em><br>Need SEO Now</h2><p class="section-desc">The businesses that invest in SEO today are impossible to compete with in 2 years. Here\'s why '+city+' '+niche.label.toLowerCase()+' can\'t afford to wait.</p><ul class="why-list">'+whyItemsHTML+'</ul></div><div class="pages-preview"><div class="pp-header"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div><span class="pp-url">yoursite.com/</span></div>'+ppRowsHTML+'</div></div></section>' +
 
-  <!-- BACK BAR -->
-  <div class="back-bar">
-    <a href="pseo-hub.html">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-      All pSEO Pages
-    </a>
-    <div class="back-sep"></div>
-    <a href="blog.html">Read the Blog</a>
-    <div class="back-sep"></div>
-    <a href="index.html#pricing">Get Started →</a>
-  </div>`;
+'<section class="faq-section"><p class="section-label">FAQ</p><h2 class="section-title">Questions About<br><em>'+niche.label+' SEO</em></h2><div class="faq-wrap">'+faqHTML+'</div></section>' +
+
+'<section class="local-cta"><div class="cta-text"><h2>Ready to Own<br><em>'+city+'\'s</em> '+niche.label+'<br>Search Results?</h2><p>We\'ll research every keyword your '+city+' customers search, build hundreds of targeted pages, and have you ranking within weeks — all done for you.</p><a href="index.html#pricing" class="btn-primary">Get Started Today →</a></div><div class="cta-cards"><a href="https://checkout.dodopayments.com/buy/pdt_0NXa2DePl8fZhiM6DNRAg?quantity=1" class="cta-card" target="_blank" rel="noopener"><div><p class="cta-card-title">Starter</p><p class="cta-card-sub">100 pages · 1 niche</p></div><div class="plan-price">$497</div></a><a href="https://checkout.dodopayments.com/buy/pdt_0NXa2NjYRr38ObMQKqyfm?quantity=1" class="cta-card" style="border-color:rgba(200,240,74,0.2)" target="_blank" rel="noopener"><div><p class="cta-card-title">Growth ⭐</p><p class="cta-card-sub">500 pages · 3 niches</p></div><div class="plan-price">$997</div></a><a href="https://checkout.dodopayments.com/buy/pdt_0NXa2kqCx6OLsoVrCMi4h?quantity=1" class="cta-card" target="_blank" rel="noopener"><div><p class="cta-card-title">Authority</p><p class="cta-card-sub">2,000+ pages · unlimited</p></div><div class="plan-price">$1,997</div></a></div></section>' +
+
+'<section class="nearby-section"><h2 class="nearby-title">'+niche.label+' SEO in Nearby Cities</h2><div class="nearby-grid">'+nearbyHTML+'</div></section>' +
+
+'<div class="back-bar"><a href="pseo-hub.html"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>All pSEO Pages</a><div class="back-sep"></div><a href="blog.html">Read the Blog</a><div class="back-sep"></div><a href="index.html#pricing">Get Started →</a></div>';
 
 // FAQ accordion
-document.querySelectorAll('.faq-q').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const item = btn.closest('.faq-item');
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item').forEach(i => {
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var item = btn.closest('.faq-item');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){
       i.classList.remove('open');
-      i.querySelector('.faq-q')?.setAttribute('aria-expanded','false');
+      i.querySelector('.faq-q').setAttribute('aria-expanded','false');
     });
-    if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+    if (!isOpen){
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    }
   });
 });
 </script>
