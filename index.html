@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- ── PRIMARY SEO META ── -->
-<title>MeniPages — Done-For-You SEO Service for Small Businesses</title>
+<title>MeniPages | Done-For-You SEO Service for Small Businesses</title>
 <meta name="description" content="MeniPages builds hundreds of Google-optimized pages for your small business — fully done for you. No tech skills needed. Start ranking on Google in weeks, not months.">
 <meta name="keywords" content="SEO service for small business, done for you SEO, programmatic SEO, local SEO service, get found on Google, SEO pages, small business SEO USA">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -19,25 +19,24 @@
 <meta property="og:url" content="https://www.menipages.com/">
 <meta property="og:title" content="MeniPages — Done-For-You SEO for Small Businesses">
 <meta property="og:description" content="We build hundreds of Google-optimized pages for your business. Fully done for you. No tech skills needed. Start ranking on Google in weeks.">
-<meta property="og:image" content="https://www.menipages.com/og-image.jpg">
+<meta property="og:image" content="/OG_Image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="MeniPages — Done-For-You SEO Service">
+<meta property="og:image:alt" content="MeniPages — Hundreds of Pages. All on Google. Zero Work.">
 <meta property="og:site_name" content="MeniPages">
 <meta property="og:locale" content="en_US">
 
-<!-- ── TWITTER CARD ── -->
+<!-- ── TWITTER / X CARD ── -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@menipages">
 <meta name="twitter:creator" content="@menipages">
 <meta name="twitter:title" content="MeniPages — Done-For-You SEO for Small Businesses">
 <meta name="twitter:description" content="We build hundreds of Google-optimized pages for your business. Fully done for you. No tech skills needed.">
-<meta name="twitter:image" content="https://www.menipages.com/og-image.jpg">
-<meta name="twitter:image:alt" content="MeniPages SEO Service">
+<meta name="twitter:image" content="/OG_Image.png">
+<meta name="twitter:image:alt" content="MeniPages — Hundreds of Pages. All on Google. Zero Work.">
 
-
-  <!-- Umami website visitor tracking -->
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="213d9c40-840c-4cae-bc63-5dae90b34e55"></script>
+<!-- ── LINKEDIN ── -->
+<meta property="og:image:secure_url" content="/OG_Image.png">
 
 <!-- ── STRUCTURED DATA: Organization ── -->
 <script type="application/ld+json">
@@ -285,10 +284,10 @@
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 1.25rem 4rem;
-    background: rgba(7,15,5,0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(200,240,74,0.1);
+    padding: 1rem 2.5rem;
+    background: rgba(7,15,5,0.95);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(200,240,74,0.12);
   }
 
   .logo {
@@ -297,25 +296,125 @@
     letter-spacing: 0.05em;
     color: var(--lime);
     text-decoration: none;
+    flex-shrink: 0;
   }
 
   .logo span { color: var(--cream); }
 
-  nav ul { list-style: none; display: flex; gap: 2.5rem; }
-  nav ul a { color: var(--sand); text-decoration: none; font-size: 0.875rem; letter-spacing: 0.05em; transition: color 0.2s; }
-  nav ul a:hover { color: var(--lime); }
+  .nav-center {
+    display: flex;
+    align-items: center;
+    gap: 0;
+  }
+
+  .nav-center a {
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    padding: 0.45rem 0.7rem;
+    border-radius: 6px;
+    transition: color 0.2s, background 0.2s;
+    white-space: nowrap;
+  }
+
+  .nav-center a:hover {
+    color: var(--lime);
+    background: rgba(200,240,74,0.07);
+  }
+
+  .nav-center a.active {
+    color: var(--lime);
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+  }
 
   .nav-cta {
     background: var(--lime);
-    color: var(--ink);
-    padding: 0.6rem 1.5rem;
-    border-radius: 4px;
+    color: var(--ink) !important;
+    padding: 0.55rem 1.4rem;
+    border-radius: 6px;
     font-weight: 500;
     font-size: 0.875rem;
     text-decoration: none;
     transition: transform 0.15s, box-shadow 0.15s;
+    white-space: nowrap;
   }
   .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 20px rgba(200,240,74,0.35); }
+
+  /* Mobile hamburger */
+  .nav-hamburger {
+    display: none;
+    background: none;
+    border: 1px solid rgba(200,240,74,0.25);
+    color: var(--cream);
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--cream);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  /* Mobile drawer */
+  .nav-drawer {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(7,15,5,0.98);
+    z-index: 99;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  .nav-drawer.open { display: flex; }
+  .nav-drawer a {
+    color: var(--cream);
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+  .nav-drawer a:hover { color: var(--lime); }
+  .nav-drawer .drawer-cta {
+    margin-top: 1rem;
+    background: var(--lime);
+    color: var(--ink);
+    padding: 0.9rem 2.5rem;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+  .nav-drawer .close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  .nav-drawer .close-btn:hover { color: var(--cream); }
 
   /* ── HERO ── */
   .hero {
@@ -501,20 +600,8 @@
   .trust-bar {
     border-top: 1px solid rgba(255,255,255,0.06);
     border-bottom: 1px solid rgba(255,255,255,0.06);
-    padding: 2rem 4rem;
-    display: flex;
-    align-items: center;
-    gap: 3rem;
+    padding: 1.5rem 0;
     overflow: hidden;
-  }
-
-  .trust-label {
-    font-size: 0.72rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--muted);
-    white-space: nowrap;
-    flex-shrink: 0;
   }
 
   .trust-scroll {
@@ -1043,7 +1130,9 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; }
-    nav ul { display: none; }
+    .nav-center { display: none; }
+    .nav-right .nav-cta { display: none; }
+    .nav-hamburger { display: flex; }
     section { padding: 5rem 1.5rem; }
     .hero { grid-template-columns: 1fr; padding: 7rem 1.5rem 4rem; }
     .hero-visual { display: none; }
@@ -1066,23 +1155,434 @@
     opacity: 1;
     transform: none;
   }
+
+  /* ════════════════════════════════════
+     CRO COMPONENTS
+     ════════════════════════════════════ */
+
+  /* ── ANNOUNCEMENT BAR ── */
+  .announcement-bar {
+    background: var(--lime);
+    color: var(--ink);
+    text-align: center;
+    padding: 0.55rem 1rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    position: relative;
+    z-index: 101;
+  }
+  .announcement-bar strong { font-weight: 700; }
+  .announcement-bar a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
+
+  /* ── STICKY BOTTOM CTA BAR ── */
+  .sticky-cta {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 90;
+    background: var(--forest);
+    border-top: 1px solid rgba(200,240,74,0.2);
+    padding: 0.9rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    flex-wrap: wrap;
+  }
+  .sticky-cta.visible { transform: translateY(0); }
+  .sticky-cta-text { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+  .sticky-cta-text strong { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; letter-spacing: 0.03em; color: var(--cream); }
+  .sticky-cta-text span { font-size: 0.8rem; color: var(--sand); }
+  .sticky-cta-actions { display: flex; align-items: center; gap: 0.75rem; }
+  .sticky-cta .btn-primary { padding: 0.6rem 1.5rem; font-size: 0.85rem; }
+  .sticky-cta-dismiss { background: none; border: none; color: var(--muted); font-size: 1.1rem; cursor: pointer; padding: 0.25rem; line-height: 1; transition: color 0.2s; }
+  .sticky-cta-dismiss:hover { color: var(--cream); }
+  @media (max-width: 600px) {
+    .sticky-cta { padding: 0.75rem 1.25rem; }
+    .sticky-cta-text span { display: none; }
+    .sticky-cta .btn-primary { padding: 0.55rem 1.1rem; font-size: 0.82rem; }
+  }
+
+  /* ── SOCIAL PROOF TICKER ── */
+  .proof-ticker {
+    background: rgba(200,240,74,0.04);
+    border-top: 1px solid rgba(200,240,74,0.08);
+    border-bottom: 1px solid rgba(200,240,74,0.08);
+    padding: 0.6rem 0;
+    overflow: hidden;
+    position: relative;
+  }
+  .ticker-track {
+    display: flex;
+    gap: 0;
+    animation: ticker 28s linear infinite;
+    white-space: nowrap;
+  }
+  .ticker-track:hover { animation-play-state: paused; }
+  @keyframes ticker {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .ticker-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 2.5rem;
+    font-size: 0.75rem;
+    color: var(--sand);
+    white-space: nowrap;
+  }
+  .ticker-dot {
+    width: 6px; height: 6px;
+    background: var(--lime);
+    border-radius: 50%;
+    flex-shrink: 0;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  /* ── URGENCY BADGE ON PRICING ── */
+  .urgency-note {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.72rem;
+    color: var(--lime);
+    margin-top: 0.75rem;
+    padding: 0.4rem 0.75rem;
+    background: rgba(200,240,74,0.06);
+    border-radius: 6px;
+    border: 1px solid rgba(200,240,74,0.12);
+  }
+  .urgency-note::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--lime);
+    border-radius: 50%;
+    animation: pulse 1.5s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+
+  /* ── GUARANTEE BADGE ── */
+  .guarantee-strip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 1.5rem;
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  .guarantee-strip svg { color: var(--lime); flex-shrink: 0; }
+  .guarantee-strip strong { color: var(--sand); }
+
+  /* ── EXIT INTENT MODAL ── */
+  .exit-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(7,15,5,0.88);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(6px);
+  }
+  .exit-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .exit-modal {
+    background: var(--forest);
+    border: 1px solid rgba(200,240,74,0.2);
+    border-radius: 18px;
+    padding: 3rem 2.5rem 2.5rem;
+    max-width: 480px;
+    width: 100%;
+    position: relative;
+    transform: scale(0.92) translateY(20px);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    text-align: center;
+  }
+  .exit-overlay.open .exit-modal {
+    transform: scale(1) translateY(0);
+  }
+  .exit-close {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    background: rgba(255,255,255,0.06);
+    border: none;
+    color: var(--muted);
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  .exit-close:hover { background: rgba(255,255,255,0.1); color: var(--cream); }
+  .exit-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--lime);
+    background: rgba(200,240,74,0.08);
+    border: 1px solid rgba(200,240,74,0.18);
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    margin-bottom: 1.25rem;
+  }
+  .exit-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.25rem;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.75rem;
+    color: var(--cream);
+  }
+  .exit-title em {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--lime);
+  }
+  .exit-sub {
+    font-size: 0.875rem;
+    color: var(--sand);
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+  }
+  .exit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .exit-input {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 0.85rem 1.1rem;
+    color: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    width: 100%;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .exit-input::placeholder { color: var(--muted); }
+  .exit-input:focus { border-color: rgba(200,240,74,0.4); }
+  .exit-submit {
+    background: var(--lime);
+    color: var(--ink);
+    border: none;
+    border-radius: 8px;
+    padding: 0.9rem 1.5rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+  }
+  .exit-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(200,240,74,0.3); }
+  .exit-skip {
+    display: block;
+    margin-top: 0.9rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.2s;
+    background: none;
+    border: none;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .exit-skip:hover { color: var(--sand); }
+  .exit-checklist {
+    list-style: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .exit-checklist li {
+    font-size: 0.82rem;
+    color: var(--sand);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .exit-checklist li::before {
+    content: '';
+    width: 16px; height: 16px;
+    background: rgba(200,240,74,0.1);
+    border: 1px solid rgba(200,240,74,0.3);
+    border-radius: 4px;
+    flex-shrink: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23C8F04A' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px;
+  }
+  .exit-success { display: none; text-align: center; }
+  .exit-success-icon {
+    width: 56px; height: 56px;
+    background: rgba(200,240,74,0.12);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+    color: var(--lime);
+  }
+
+  /* ── FLOATING CHAT BUTTON ── */
+  .float-btn {
+    position: fixed;
+    bottom: 5rem;
+    right: 1.5rem;
+    z-index: 88;
+    background: #25D366;
+    color: #fff;
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: all 0.2s;
+    opacity: 0;
+    transform: scale(0.5);
+    pointer-events: none;
+  }
+  .float-btn.visible {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: all;
+  }
+  .float-btn:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
+  .float-tooltip {
+    position: absolute;
+    right: calc(100% + 10px);
+    background: var(--forest);
+    border: 1px solid rgba(200,240,74,0.15);
+    border-radius: 8px;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.72rem;
+    white-space: nowrap;
+    color: var(--cream);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+  .float-btn:hover .float-tooltip { opacity: 1; }
 </style>
+
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="213d9c40-840c-4cae-bc63-5dae90b34e55"></script>
+  
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar" role="banner">
+  🔥 <strong>April offer:</strong> First 3 clients get a free keyword research report (worth $297) — <a href="#pricing">claim your spot →</a>
+</div>
+
+<!-- EXIT INTENT MODAL -->
+<div class="exit-overlay" id="exit-overlay" role="dialog" aria-modal="true" aria-labelledby="exit-title">
+  <div class="exit-modal">
+    <button class="exit-close" id="exit-close" aria-label="Close">✕</button>
+    <div id="exit-form-wrap">
+      <div class="exit-eyebrow">
+        <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Wait — before you go
+      </div>
+      <h2 class="exit-title" id="exit-title">Get <em>3 Free</em><br>Example Pages</h2>
+      <p class="exit-sub">Enter your business type and we'll send you 3 actual SEO pages we'd build for you — completely free, no strings attached.</p>
+      <ul class="exit-checklist">
+        <li>Real pages targeting your exact keywords</li>
+        <li>Formatted and ready to publish</li>
+        <li>Delivered to your inbox within 24 hours</li>
+      </ul>
+      <div class="exit-form">
+        <input class="exit-input" type="text" id="exit-business" placeholder="Your business type (e.g. Plumber, Dentist…)" autocomplete="organization">
+        <input class="exit-input" type="email" id="exit-email" placeholder="Your email address" autocomplete="email">
+        <button class="exit-submit" id="exit-submit-btn">Send Me My Free Pages →</button>
+      </div>
+      <button class="exit-skip" id="exit-skip">No thanks, I don't want free pages</button>
+    </div>
+    <div class="exit-success" id="exit-success">
+      <div class="exit-success-icon">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;margin-bottom:0.5rem;letter-spacing:0.02em;">You're on the list!</h3>
+      <p style="font-size:0.875rem;color:var(--sand);line-height:1.6;">Check your inbox within 24 hours — your 3 free example pages are on their way.</p>
+    </div>
+  </div>
+</div>
+
+<!-- STICKY BOTTOM CTA -->
+<div class="sticky-cta" id="sticky-cta" role="complementary" aria-label="Quick access to pricing">
+  <div class="sticky-cta-text">
+    <strong>Ready to rank on Google?</strong>
+    <span>Starter plan from $497 · No contracts · Done for you</span>
+  </div>
+  <div class="sticky-cta-actions">
+    <a href="#pricing" class="btn-primary" onclick="document.getElementById('sticky-cta').classList.remove('visible')">See Plans →</a>
+    <button class="sticky-cta-dismiss" id="sticky-dismiss" aria-label="Dismiss">✕</button>
+  </div>
+</div>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/+260972293050?text=Hi%2C%20I%27m%20interested%20in%20MeniPages%20SEO%20services" class="float-btn" id="float-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <div class="float-tooltip">Chat with us</div>
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<!-- MOBILE DRAWER -->
+<div class="nav-drawer" id="nav-drawer" role="dialog" aria-label="Navigation menu">
+  <button class="close-btn" id="drawer-close" aria-label="Close menu">✕</button>
+  <a href="#how" onclick="closeDrawer()">How it Works</a>
+  <a href="#what" onclick="closeDrawer()">What You Get</a>
+  <a href="#pricing" onclick="closeDrawer()">Pricing</a>
+  <a href="#faq" onclick="closeDrawer()">FAQ</a>
+  <a href="blog.html" onclick="closeDrawer()">Blog</a>
+  <a href="pseo-hub.html" onclick="closeDrawer()">pSEO Hub</a>
+  <a href="#pricing" class="drawer-cta" onclick="closeDrawer()">Get Started →</a>
+</div>
+
 <!-- NAV -->
-<nav>
-  <a href="#" class="logo">Meni<span>Pages</span></a>
-  <ul>
-    <li><a href="#how">How it Works</a></li>
-    <li><a href="#what">What You Get</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="pseo-hub.html">pSEO Hub</a></li>
-  </ul>
-  <a href="#pricing" class="nav-cta">Get Started →</a>
+<nav aria-label="Main navigation">
+  <a href="#" class="logo" aria-label="MeniPages home">Meni<span>Pages</span></a>
+
+  <div class="nav-center" role="list">
+    <a href="#how">How it Works</a>
+    <a href="#what">What You Get</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a href="blog.html">Blog</a>
+    <a href="pseo-hub.html">pSEO Hub</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="#pricing" class="nav-cta">Get Started →</a>
+    <button class="nav-hamburger" id="hamburger-btn" aria-label="Open navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
 <main id="main-content">
@@ -1134,9 +1634,26 @@
   </div>
 </section>
 
+<!-- SOCIAL PROOF TICKER -->
+<div class="proof-ticker" aria-label="Recent customer activity">
+  <div class="ticker-track" aria-hidden="true">
+    <span class="ticker-item"><span class="ticker-dot"></span>Marcus T. from Houston just launched 200 SEO pages</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Sarah R.'s dental practice ranked #2 for 12 keywords this week</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>A plumbing company in Chicago went from 0 to 400 monthly visitors</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Kevin P. cut his Google Ads spend by 60% after switching to MeniPages</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>A law firm in Dallas ranked on page 1 for 28 search terms in 6 weeks</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>14 new businesses joined MeniPages this month</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Marcus T. from Houston just launched 200 SEO pages</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Sarah R.'s dental practice ranked #2 for 12 keywords this week</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>A plumbing company in Chicago went from 0 to 400 monthly visitors</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Kevin P. cut his Google Ads spend by 60% after switching to MeniPages</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>A law firm in Dallas ranked on page 1 for 28 search terms in 6 weeks</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>14 new businesses joined MeniPages this month</span>
+  </div>
+</div>
+
 <!-- TRUST BAR -->
 <div class="trust-bar">
-  <span class="trust-label">Works for any niche</span>
   <div class="trust-scroll">
     <span>Plumbers</span><span>Dentists</span><span>Law Firms</span><span>Real Estate</span>
     <span>Restaurants</span><span>Accountants</span><span>Gyms</span><span>Contractors</span>
@@ -1332,6 +1849,7 @@
   <p class="section-desc">No long-term contracts. Cancel anytime. Every plan includes full done-for-you delivery.</p>
 
   <div class="pricing-cards">
+    <!-- STARTER -->
     <div class="price-card" itemscope itemtype="https://schema.org/Offer">
       <p class="price-tier" itemprop="name">Starter</p>
       <div class="price-amount"><sup>$</sup>497</div>
@@ -1345,8 +1863,10 @@
         <li>1 niche / location</li>
       </ul>
       <a href="https://checkout.dodopayments.com/buy/pdt_0NXa2DePl8fZhiM6DNRAg?quantity=1" class="btn-plan" target="_blank" rel="noopener">Get Started →</a>
+      <p class="urgency-note">2 spots left this month</p>
     </div>
 
+    <!-- GROWTH -->
     <div class="price-card featured" itemscope itemtype="https://schema.org/Offer">
       <div class="price-badge">Most Popular</div>
       <p class="price-tier" itemprop="name">Growth</p>
@@ -1361,9 +1881,10 @@
         <li>3 niches / locations</li>
         <li>Monthly page refreshes</li>
       </ul>
-      <a href="https://checkout.dodopayments.com/buy/pdt_0NXa2NjYRr38ObMQKqyfm?quantity=1" target="_blank" class="btn-plan" rel="noopener">Get Started →</a>
+      <a href="https://checkout.dodopayments.com/buy/pdt_0NXa2NjYRr38ObMQKqyfm?quantity=1" class="btn-plan" target="_blank" rel="noopener">Get Started →</a>
     </div>
 
+    <!-- AUTHORITY -->
     <div class="price-card" itemscope itemtype="https://schema.org/Offer">
       <p class="price-tier" itemprop="name">Authority</p>
       <div class="price-amount"><sup>$</sup>1,997</div>
@@ -1379,6 +1900,12 @@
       </ul>
       <a href="https://checkout.dodopayments.com/buy/pdt_0NXa2kqCx6OLsoVrCMi4h?quantity=1" class="btn-plan" target="_blank" rel="noopener">Get Started →</a>
     </div>
+  </div>
+
+  <!-- GUARANTEE STRIP -->
+  <div class="guarantee-strip">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    <span><strong>30-day results guarantee.</strong> If you don't see rankings start appearing within 30 days, we work for free until you do.</span>
   </div>
 </section>
 
@@ -1457,6 +1984,162 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
 
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Mobile hamburger / drawer
+  const hamburger = document.getElementById('hamburger-btn');
+  const drawer = document.getElementById('nav-drawer');
+  const drawerClose = document.getElementById('drawer-close');
+
+  function openDrawer() {
+    drawer.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', openDrawer);
+  drawerClose.addEventListener('click', closeDrawer);
+
+  // Close drawer on ESC key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeDrawer();
+  });
+
+  // Subtle nav scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 20) {
+      nav.style.background = 'rgba(7,15,5,0.98)';
+      nav.style.borderBottomColor = 'rgba(200,240,74,0.15)';
+    } else {
+      nav.style.background = 'rgba(7,15,5,0.95)';
+      nav.style.borderBottomColor = 'rgba(200,240,74,0.12)';
+    }
+  });
+
+  // ════════════════════════════════════
+  //  CRO: STICKY BOTTOM BAR
+  // ════════════════════════════════════
+  const stickyCta   = document.getElementById('sticky-cta');
+  const stickyDismiss = document.getElementById('sticky-dismiss');
+  let stickyDismissed = false;
+  let stickyShown = false;
+
+  const stickyObserver = new IntersectionObserver(entries => {
+    if (stickyDismissed) return;
+    const heroVisible = entries[0].isIntersecting;
+    if (!heroVisible && !stickyShown) {
+      stickyShown = true;
+      stickyCta.classList.add('visible');
+    } else if (heroVisible) {
+      stickyCta.classList.remove('visible');
+    }
+  }, { threshold: 0.1 });
+
+  const heroSection = document.querySelector('.hero');
+  if (heroSection) stickyObserver.observe(heroSection);
+
+  stickyDismiss.addEventListener('click', () => {
+    stickyDismissed = true;
+    stickyCta.classList.remove('visible');
+  });
+
+  // ════════════════════════════════════
+  //  CRO: FLOATING BUTTON
+  // ════════════════════════════════════
+  const floatBtn = document.getElementById('float-btn');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      floatBtn.classList.add('visible');
+    } else {
+      floatBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  // ════════════════════════════════════
+  //  CRO: EXIT INTENT MODAL
+  // ════════════════════════════════════
+  const exitOverlay  = document.getElementById('exit-overlay');
+  const exitClose    = document.getElementById('exit-close');
+  const exitSkip     = document.getElementById('exit-skip');
+  const exitSubmit   = document.getElementById('exit-submit-btn');
+  const exitFormWrap = document.getElementById('exit-form-wrap');
+  const exitSuccess  = document.getElementById('exit-success');
+
+  let exitShown = false;
+  let exitDismissed = sessionStorage.getItem('exitDismissed') === 'true';
+  let timeOnPage = 0;
+
+  // Show exit intent on mouse leaving window (desktop)
+  document.addEventListener('mouseleave', e => {
+    if (e.clientY < 20 && !exitShown && !exitDismissed && timeOnPage > 15) {
+      showExit();
+    }
+  });
+
+  // Fallback: show after 45 seconds if still on page and hasn't scrolled to pricing
+  const exitTimer = setInterval(() => {
+    timeOnPage++;
+    if (timeOnPage >= 45 && !exitShown && !exitDismissed) {
+      const pricingSection = document.getElementById('pricing');
+      if (pricingSection) {
+        const rect = pricingSection.getBoundingClientRect();
+        // Only show if they haven't reached pricing yet
+        if (rect.top > window.innerHeight) {
+          showExit();
+        }
+      }
+    }
+  }, 1000);
+
+  // Mobile: show on back-button intent (popstate)
+  window.addEventListener('pageshow', () => {
+    if (!exitShown && !exitDismissed && timeOnPage > 10) showExit();
+  });
+
+  function showExit() {
+    if (exitShown || exitDismissed) return;
+    exitShown = true;
+    clearInterval(exitTimer);
+    exitOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeExit() {
+    exitOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+    sessionStorage.setItem('exitDismissed', 'true');
+  }
+
+  exitClose.addEventListener('click', closeExit);
+  exitSkip.addEventListener('click', closeExit);
+  exitOverlay.addEventListener('click', e => {
+    if (e.target === exitOverlay) closeExit();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && exitOverlay.classList.contains('open')) closeExit();
+  });
+
+  exitSubmit.addEventListener('click', () => {
+    const business = document.getElementById('exit-business').value.trim();
+    const email    = document.getElementById('exit-email').value.trim();
+    if (!email || !email.includes('@')) {
+      document.getElementById('exit-email').style.borderColor = 'rgba(255,100,100,0.5)';
+      return;
+    }
+    // Show success state
+    exitFormWrap.style.display = 'none';
+    exitSuccess.style.display = 'block';
+    sessionStorage.setItem('exitDismissed', 'true');
+    // Auto-close after 3s
+    setTimeout(closeExit, 3000);
+    // Here you'd send to your email/CRM: fetch('/api/leads', { method:'POST', body: JSON.stringify({business, email}) })
+  });
 </script>
 </body>
 </html>
